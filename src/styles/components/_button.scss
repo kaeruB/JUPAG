@@ -1,0 +1,11 @@
+button {
+  background: none;
+  padding: 1rem;
+  border: none;
+  border-radius: 3px;
+  transition: all .3s;
+
+  &:active {
+    transform: translateY(.5rem);
+  }
+}
