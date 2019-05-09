@@ -14,7 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatchComponent } from './match/match.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule,
-  MatCheckboxModule, MatListModule, MatTableModule } from '@angular/material';
+  MatCheckboxModule, MatListModule, MatTableModule, MatGridListModule } from '@angular/material';
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
@@ -40,7 +40,8 @@ import { FooterComponent } from './footer/footer.component';
     MatIconModule,
     MatInputModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

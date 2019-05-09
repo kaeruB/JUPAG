@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent implements OnInit {
-
+  // value = 'Clear me';
   constructor() { }
 
   ngOnInit() {

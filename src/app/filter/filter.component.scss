@@ -1,0 +1,26 @@
+@import '../../styles/_variables.scss';
+
+:host {
+  width: 100%;
+}
+
+.filter {
+  &__title {
+    font-size: $font-size-header-secondary;
+    text-align: left;
+    padding-left: 2rem;
+    border-bottom: 1px solid;
+  }
+
+  &__subtitle {
+    font-size: $font-size-header-tertiary;
+  }
+}
+
+mat-grid-tile {
+  border-bottom: 1px solid $color-grey-light;
+}
+
+//.example-form-field {
+//  width: 200px;
+//}
