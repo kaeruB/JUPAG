@@ -1,0 +1,31 @@
+:host {
+  width: 100%;
+}
+
+.results {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.result__list {
+  height: 30rem;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 30rem;
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
+
+tr.mat-header-row {
+  height: 0;
+}
+
+.mat-table-sticky {
+  border-top: 1px solid #e0e0e0;
+}

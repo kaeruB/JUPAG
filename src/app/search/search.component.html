@@ -1,4 +1,52 @@
-<p>
-  TU BEDZIE SEARCH
-  <app-filter></app-filter>
-</p>
+<app-filter></app-filter>
+<div class="results">
+  <div class="result">
+    <h3 class="result__title">Match</h3>
+    <div class="result__list mat-elevation-z8">
+      <table mat-table [dataSource]="matches">
+
+        <ng-container matColumnDef="item">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let item"> {{item.item}} </td>
+          <td mat-footer-cell *matFooterCellDef> Match </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+  <div class="result">
+    <h3 class="result__title">Player</h3>
+    <div class="result__list mat-elevation-z8">
+      <table mat-table [dataSource]="players">
+
+        <ng-container matColumnDef="item">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let item"> {{item.item}} </td>
+          <td mat-footer-cell *matFooterCellDef> Player </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="result">
+    <h3 class="result__title">Team</h3>
+    <div class="result__list mat-elevation-z8">
+      <table mat-table [dataSource]="teams">
+
+        <ng-container matColumnDef="item">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let item"> {{item.item}} </td>
+          <td mat-footer-cell *matFooterCellDef> Match </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+</div>

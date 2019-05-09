@@ -2,19 +2,15 @@
   <div class="header u-margin-top-huge u-margin-bottom-large">
     <h1 class="header__title">JUPAG SPORT</h1>
     <div class="header__menu">
-      <div class="form-group header__search">
-        <input type="text" class="form-control" id="search"
-               required
-               [(ngModel)]="searchField" name="search"
-               #search="ngModel">
-      </div>
+      <mat-form-field class="form-group header__search">
+        <input matInput placeholder="Search" id="search" [(ngModel)]="searchField" name="search" #search="ngModel">
+      </mat-form-field>
       <button class="header__search--button"><i class="fas fa-search"></i></button>
       <button class="header__contact"><i class="fas fa-envelope"></i></button>
     </div>
   </div>
 
-  <app-search></app-search>
+  <app-search class="u-margin-bottom-medium u-margin-top-huge"></app-search>
   <router-outlet></router-outlet>
+  <app-footer class="u-margin-bottom-medium u-margin-top-huge"></app-footer>
 </div>
-
-

@@ -29,6 +29,11 @@
 
   &__search {
     padding: 1.5rem;
+    font-size: 2rem;
+
+    input {
+      color: $color-tertiary;
+    }
   }
 
   &__search--button {

@@ -12,6 +12,10 @@ import { HomeCardComponent } from './home-card/home-card.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AppRoutingModule } from './app-routing.module';
 import { MatchComponent } from './match/match.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule,
+  MatCheckboxModule, MatListModule, MatTableModule } from '@angular/material';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +24,23 @@ import { MatchComponent } from './match/match.component';
     FilterComponent,
     HomeComponent,
     HomeCardComponent,
-    MatchComponent
+    MatchComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    BrowserModule,
     FormsModule,
     AngularFontAwesomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    BrowserAnimationsModule,
+    MatSelectModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
