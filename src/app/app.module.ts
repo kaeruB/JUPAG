@@ -13,8 +13,10 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AppRoutingModule } from './app-routing.module';
 import { MatchComponent } from './match/match.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule,
-  MatCheckboxModule, MatListModule, MatTableModule, MatGridListModule } from '@angular/material';
+import {
+  MatInputModule, MatButtonModule, MatSelectModule, MatIconModule,
+  MatCheckboxModule, MatListModule, MatTableModule, MatGridListModule, MatDatepickerModule, MatNativeDateModule
+} from '@angular/material';
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
@@ -41,7 +43,9 @@ import { FooterComponent } from './footer/footer.component';
     MatInputModule,
     MatListModule,
     MatTableModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
