@@ -18,7 +18,10 @@
 }
 
 mat-grid-tile {
+  border-left: 1px solid $color-grey-light;
+  border-right: 1px solid $color-grey-light;
   border-bottom: 1px solid $color-grey-light;
+  border-top: 1px solid $color-grey-light;
 }
 
 //.example-form-field {

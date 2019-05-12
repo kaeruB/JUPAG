@@ -4,26 +4,204 @@
   <mat-grid-tile [colspan]="1" [rowspan]="1" class="filter__subtitle">Match</mat-grid-tile>
   <mat-grid-tile [colspan]="1" [rowspan]="1" class="filter__subtitle">Player</mat-grid-tile>
   <mat-grid-tile [colspan]="1" [rowspan]="1" class="filter__subtitle">Team</mat-grid-tile>
+
   <mat-grid-tile [colspan]="1" [rowspan]="2">
-    <mat-form-field class="example-form-field">
-      <input matInput type="text" placeholder="Place" [(ngModel)]="value">
-      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-        <mat-icon>close</mat-icon>
-      </button>
+    <mat-form-field style="width: 30%; height: 30%; margin-left: 10%;">
+      <label>
+        <input style="width: 60%; height: 50%;" matInput [matDatepicker]="pickerDateFrom" placeholder="Date (from)">
+        <mat-datepicker-toggle matSuffix [for]="pickerDateFrom"></mat-datepicker-toggle>
+        <mat-datepicker #pickerDateFrom></mat-datepicker>
+      </label>
     </mat-form-field>
-    <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Before (date)">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput [matDatepicker]="picker2" placeholder="After (date)">
-      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-      <mat-datepicker #picker2></mat-datepicker>
+
+    <div style="padding-right: 1rem; padding-left: 1rem;"></div>
+
+    <mat-form-field style="width: 30%; height: 30%; margin-right: 10%;">
+      <label>
+        <input style="width: 60%; height: 50%;" matInput [matDatepicker]="pickerDateTo" placeholder="Date (to)">
+        <mat-datepicker-toggle matSuffix [for]="pickerDateTo"></mat-datepicker-toggle>
+        <mat-datepicker #pickerDateTo></mat-datepicker>
+      </label>
     </mat-form-field>
   </mat-grid-tile>
-  <mat-grid-tile [colspan]="1" [rowspan]="1">3</mat-grid-tile>
-  <mat-grid-tile [colspan]="1" [rowspan]="1">4</mat-grid-tile>
-  <mat-grid-tile [colspan]="2" [rowspan]="1">5</mat-grid-tile>
-  <mat-grid-tile [colspan]="3" [rowspan]="1">6</mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="1">
+    <mat-form-field style="width: 30%; height: 30%; margin-left: 10%;">
+      <mat-select [(ngModel)]="ageFrom" placeholder="Age (from)" style="width: 100%; height: 50%;">
+        <mat-option *ngFor="let num of ageValues" [value]="num">{{ num }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div style="padding-right: 1rem; padding-left: 1rem;"></div>
+
+    <mat-form-field style="width: 30%; height: 30%; margin-right: 10%;">
+      <mat-select [(ngModel)]="ageTo" placeholder="Age (to)" style="width: 100%; height: 50%;">
+        <mat-option *ngFor="let num of ageValues" [value]="num">{{ num }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="2">
+    <mat-form-field style="width: 60%; height: 30%; margin-left: 10%; margin-right: 10%;">
+      <label>
+        <input matInput type="text" placeholder="Trainer" [(ngModel)]="trainer" style="width: 80%; height: 50%;">
+        <button mat-button *ngIf="trainer" matSuffix mat-icon-button aria-label="Clear" (click)="trainer=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </label>
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="1" [rowspan]="1">
+    <mat-form-field style="width: 40%; height: 30%; margin-left: 10%;">
+      <label>
+        <input matInput type="text" placeholder="Position" [(ngModel)]="position" style="width: 70%; height: 50%;">
+        <button mat-button *ngIf="position" matSuffix mat-icon-button aria-label="Clear" (click)="position=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </label>
+    </mat-form-field>
+
+    <div style="padding-right: 1rem; padding-left: 1rem;"></div>
+
+    <mat-form-field style="width: 40%; height: 30%; margin-right: 10%;">
+      <label>
+        <input matInput type="text" placeholder="Nationality" [(ngModel)]="nationality" style="width: 70%; height: 50%;">
+        <button mat-button *ngIf="nationality" matSuffix mat-icon-button aria-label="Clear" (click)="nationality=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </label>
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="1" [rowspan]="2">
+    <mat-form-field style="width: 60%; height: 30%; margin-left: 10%; margin-right: 10%;">
+      <label>
+        <input matInput type="text" placeholder="Place" [(ngModel)]="place" style="width: 80%; height: 50%;">
+        <button mat-button *ngIf="place" matSuffix mat-icon-button aria-label="Clear" (click)="place=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </label>
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="2" [rowspan]="1">
+    <mat-form-field style="width: 25%; height: 60%;">
+      <label>
+        <input style="width: 75%; height: 50%;" matInput [matDatepicker]="pickerActiveFrom" placeholder="Active (from)">
+        <mat-datepicker-toggle matSuffix [for]="pickerActiveFrom"></mat-datepicker-toggle>
+        <mat-datepicker #pickerActiveFrom></mat-datepicker>
+      </label>
+    </mat-form-field>
+
+    <div style="padding-right: 1rem; padding-left: 1rem;"></div>
+
+    <mat-form-field style="width: 25%; height: 60%;">
+      <label>
+        <input style="width: 75%; height: 50%;" matInput [matDatepicker]="pickerActiveTo" placeholder="Active (to)">
+        <mat-datepicker-toggle matSuffix [for]="pickerActiveTo"></mat-datepicker-toggle>
+        <mat-datepicker #pickerActiveTo></mat-datepicker>
+      </label>
+    </mat-form-field>
+
+    <div style="padding-right: 3rem; padding-left: 3rem;"></div>
+
+    <mat-form-field style="width: 25%; height: 40%;">
+      <label>
+        <input matInput type="text" placeholder="Best in season" [(ngModel)]="bestInSeason" style="width: 70%; height: 50%;">
+        <button mat-button *ngIf="bestInSeason" matSuffix mat-icon-button aria-label="Clear" (click)="bestInSeason=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </label>
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="2" [rowspan]="1">
+    <mat-form-field style="width: 30%; height: 30%; margin-left: 10%;">
+      <mat-select [(ngModel)]="wonMatchesFrom" placeholder="Won matches (from)" style="width: 100%; height: 50%;">
+        <mat-option *ngFor="let num of matchesValues" [value]="num">{{ num }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div style="padding-right: 1rem; padding-left: 1rem;"></div>
+
+    <mat-form-field style="width: 30%; height: 30%; margin-right: 10%;">
+      <mat-select [(ngModel)]="wonMatchesTo" placeholder="Won matches (to)" style="width: 100%; height: 50%;">
+        <mat-option *ngFor="let num of matchesValues" [value]="num">{{ num }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="1" [rowspan]="1"></mat-grid-tile>
+  <mat-grid-tile [colspan]="2" [rowspan]="1">
+    <mat-form-field style="width: 30%; height: 30%; margin-left: 10%;">
+      <mat-select [(ngModel)]="lostMatchesFrom" placeholder="Lost matches (from)" style="width: 100%; height: 50%;">
+        <mat-option *ngFor="let num of matchesValues" [value]="num">{{ num }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div style="padding-right: 1rem; padding-left: 1rem;"></div>
+
+    <mat-form-field style="width: 30%; height: 30%; margin-right: 10%;">
+      <mat-select [(ngModel)]="lostMatchesTo" placeholder="Lost matches (to)" style="width: 100%; height: 50%;">
+        <mat-option *ngFor="let num of matchesValues" [value]="num">{{ num }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="3" [rowspan]="1">
+    <mat-form-field style="width: 20%; height: 30%;">
+      <label>
+        <input matInput type="text" placeholder="Season" [(ngModel)]="season" style="width: 70%; height: 50%;">
+        <button mat-button *ngIf="season" matSuffix mat-icon-button aria-label="Clear" (click)="season=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </label>
+    </mat-form-field>
+
+    <div style="padding-right: 3rem; padding-left: 3rem;"></div>
+
+    <mat-form-field style="width: 20%; height: 30%;">
+      <mat-select [(ngModel)]="goalsNumberFrom" placeholder="Goals number (from)" style="width: 100%; height: 50%;">
+        <mat-option *ngFor="let num of goalsNumberValues" [value]="num">{{ num }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div style="padding-right: 1rem; padding-left: 1rem;"></div>
+
+    <mat-form-field style="width: 20%; height: 30%;">
+      <mat-select [(ngModel)]="goalsNumberTo" placeholder="Goals number (to)" style="width: 100%; height: 50%;">
+        <mat-option *ngFor="let num of goalsNumberValues" [value]="num">{{ num }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="3" [rowspan]="1">
+    <mat-form-field style="width: 20%; height: 30%;">
+      <mat-select [(ngModel)]="yellowFlagsFrom" placeholder="Yellow flags (from)" style="width: 100%; height: 50%;">
+        <mat-option *ngFor="let num of flagsValues" [value]="num">{{ num }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div style="padding-right: 1rem; padding-left: 1rem;"></div>
+
+    <mat-form-field style="width: 20%; height: 30%;">
+      <mat-select [(ngModel)]="yellowFlagsTo" placeholder="Yellow flags (to)" style="width: 100%; height: 50%;">
+        <mat-option *ngFor="let num of flagsValues" [value]="num">{{ num }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div style="padding-right: 3rem; padding-left: 3rem;"></div>
+
+    <mat-form-field style="width: 20%; height: 30%;">
+      <mat-select [(ngModel)]="redFlagsFrom" placeholder="Red flags (from)" style="width: 100%; height: 50%;">
+        <mat-option *ngFor="let num of flagsValues" [value]="num">{{ num }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div style="padding-right: 1rem; padding-left: 1rem;"></div>
+
+    <mat-form-field style="width: 20%; height: 30%;">
+      <mat-select [(ngModel)]="redFlagsTo" placeholder="Red flags (to)" style="width: 100%; height: 50%;">
+        <mat-option *ngFor="let num of flagsValues" [value]="num">{{ num }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-grid-tile>
 </mat-grid-list>
