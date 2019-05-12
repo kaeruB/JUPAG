@@ -1,0 +1,46 @@
+@import '../../../styles/_variables.scss';
+
+.match-cards{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 6rem;
+
+  background: $color-grey;
+  color: $color-light;
+  width: max-content;
+}
+
+.container{}
+.column-left{ float: left; width: 50%;}
+.column-right{ float: right; width: 50%;}
+
+#inner-left{
+  display: table;
+}
+#left-card{
+  display: inline-block;
+
+}
+
+
+#rectangle-card {
+  width:100px;
+  height:50px;
+  background:yellow;
+}
+
+#rectangle-match {
+  width:100px;
+  height:50px;
+  background:gray;
+
+}
+
+#rectangle-match-bigger {
+  width:150px;
+  height:75px;
+  background:gray;
+
+}
+
