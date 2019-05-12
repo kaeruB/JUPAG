@@ -1,0 +1,12 @@
+@import '../../styles/_variables.scss';
+
+.match-component{
+  display: block;
+  alignment: center;
+  position: relative;
+  width: 1800px;
+  //margin-top: 20px;
+  background-color: $color-grey;
+  height: 100rem;
+  color: black;
+}

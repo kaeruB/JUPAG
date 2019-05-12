@@ -7,8 +7,9 @@
   width: 1800px;
   margin-top: 20px;
   background-color: $color-grey;
-  height: 1000rem;
+  height: 80rem;
   color: black;
+  border-bottom: 1px solid black;
   .match_date_location {
     width: auto;
     font-size: 20px;
@@ -58,10 +59,3 @@
     }
   }
 }
-
-//
-//.column-left{ float: left; width: 45%;}
-//.column-right{ float: right; width: 45%;}
-//.column-center{  display: inline-block;  width: 10%; }
-//
-

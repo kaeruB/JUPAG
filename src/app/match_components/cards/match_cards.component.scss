@@ -1,46 +1,102 @@
 @import '../../../styles/_variables.scss';
 
 .match-cards{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 6rem;
-
-  background: $color-grey;
-  color: $color-light;
-  width: max-content;
+  display: block;
+  alignment: center;
+  position: relative;
+  width: 1800px;
+  margin-top: 20px;
+  background-color: $color-grey;
+  height: 80rem;
+  color: black;
+  .title{
+    color: black;
+    text-decoration: underline;
+    font-size: 50px;
+    margin-right: 150rem;
+    padding-top: 30px;
+  }
+  .container-cards{
+    .column-left{
+      float: left;
+      width: 50%;
+      border-right: 1px solid black;
+      .line{
+        float: left;
+        width: 50%;
+        padding: 2rem;
+        font-size: 20px;
+      }
+      .card{
+        float: right;
+        margin-left: 5rem;
+        vertical-align: center;
+        margin-top: 5rem;
+        padding: 5rem;
+      }
+    }
+    .column-right{
+      float: left;
+      width: 50%;
+      border-right: 1px solid black;
+      .line{
+        float: right;
+        width: 50%;
+        //padding: 2rem;
+        font-size: 20px;
+        margin-right: 2rem;
+      }
+      .card{
+        float: left;
+        margin-left: 5rem;
+        vertical-align: center;
+        margin-top: 5rem;
+        padding: 5rem;
+      }
+    }
+  }
 }
-
-.container{}
-.column-left{ float: left; width: 50%;}
-.column-right{ float: right; width: 50%;}
-
-#inner-left{
-  display: table;
-}
-#left-card{
-  display: inline-block;
-
-}
-
-
-#rectangle-card {
-  width:100px;
-  height:50px;
-  background:yellow;
-}
-
-#rectangle-match {
-  width:100px;
-  height:50px;
-  background:gray;
-
-}
-
-#rectangle-match-bigger {
-  width:150px;
-  height:75px;
-  background:gray;
-
-}
-
+//.match-cards{
+//  display: flex;
+//  align-items: center;
+//  flex-direction: column;
+//  padding: 6rem;
+//
+//  background: $color-grey;
+//  color: $color-light;
+//  width: max-content;
+//}
+//
+//.container{}
+//.column-left{ float: left; width: 50%;}
+//.column-right{ float: right; width: 50%;}
+//
+//#inner-left{
+//  display: table;
+//}
+//#left-card{
+//  display: inline-block;
+//
+//}
+//
+//
+//#rectangle-card {
+//  width:100px;
+//  height:50px;
+//  background:yellow;
+//}
+//
+//#rectangle-match {
+//  width:100px;
+//  height:50px;
+//  background:gray;
+//
+//}
+//
+//#rectangle-match-bigger {
+//  width:150px;
+//  height:75px;
+//  background:gray;
+//
+//}
+//
