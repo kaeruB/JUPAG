@@ -23,6 +23,7 @@ import {
 } from '@angular/material';
 import { FooterComponent } from './footer/footer.component';
 import {MatchCardsComponent} from './match_components/cards/match_cards.component';
+import {MatchInjuriesComponent} from './match_components/injuries/match_injuries.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {MatchCardsComponent} from './match_components/cards/match_cards.componen
     MatchComponent,
     FooterComponent,
     MatchGoalsComponent,
-    MatchCardsComponent
+    MatchCardsComponent,
+    MatchInjuriesComponent
   ],
   imports: [
     BrowserModule,
