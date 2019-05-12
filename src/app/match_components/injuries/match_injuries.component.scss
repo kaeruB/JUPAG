@@ -1,0 +1,39 @@
+@import '../../../styles/_variables.scss';
+
+.match-injuries {
+  display: block;
+  alignment: center;
+  position: relative;
+  width: 1800px;
+  margin-top: 20px;
+  background-color: $color-grey;
+  height: 80rem;
+  color: black;
+  border-bottom: 1px solid black;
+  .title{
+    color: black;
+    text-decoration: underline;
+    font-size: 50px;
+    margin-right: 150rem;
+    padding-top: 30px;
+  }
+  .container-injuries{
+    .column-left{
+      float: left;
+      width: 50%;
+      border-right: 1px solid black;
+      .injury-left{
+        float: left;
+        width: 50%;
+      }
+      .injury-right{
+        float: right;
+        width: 50%;
+      }
+    }
+    .column-right{
+      float: right;
+      width: 50%;
+    }
+  }
+}

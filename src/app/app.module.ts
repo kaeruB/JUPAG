@@ -11,13 +11,19 @@ import { HomeCardComponent } from './home-card/home-card.component';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AppRoutingModule } from './app-routing.module';
+
+
 import { MatchComponent } from './match/match.component';
+import {MatchGoalsComponent} from './match_components/goals/match_goals.component';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
   MatInputModule, MatButtonModule, MatSelectModule, MatIconModule,
   MatCheckboxModule, MatListModule, MatTableModule, MatGridListModule, MatDatepickerModule, MatNativeDateModule
 } from '@angular/material';
 import { FooterComponent } from './footer/footer.component';
+import {MatchCardsComponent} from './match_components/cards/match_cards.component';
+import {MatchInjuriesComponent} from './match_components/injuries/match_injuries.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,10 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     HomeCardComponent,
     MatchComponent,
-    FooterComponent
+    FooterComponent,
+    MatchGoalsComponent,
+    MatchCardsComponent,
+    MatchInjuriesComponent
   ],
   imports: [
     BrowserModule,
