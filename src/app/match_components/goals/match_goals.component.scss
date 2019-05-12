@@ -1,61 +1,34 @@
 @import '../../../styles/_variables.scss';
 
-.match-goals {
-  display: block;
-  alignment: center;
-  position: relative;
-  width: 1800px;
-  margin-top: 20px;
-  background-color: $color-grey;
-  height: 80rem;
-  color: black;
-  border-bottom: 1px solid black;
-  .match_date_location {
-    width: auto;
-    font-size: 40px;
-    color: black;
-    margin-right: 100rem;
-    padding-top: 20px;
-  }
-  .title{
-    color: black;
-    text-decoration: underline;
-    font-size: 50px;
-    margin-right: 150rem;
-    padding-top: 30px;
-  }
-  .container-team-names{
-    padding-top: 50px;
-    border-bottom: 1px solid #000000;
-    font-size: 25px;
-    .column-left{
-      float: left;
-      width: 45%;
-      display: block;
+.goals {
+  padding-top: 8rem;
 
-    }
-    .column-right{ float: right; width: 45%;}
-    .column-center{  display: inline-block;  width: 10%; }
-
+  &__container {
+    display: flex;
+    padding-top: 4rem;
   }
-  .images-container{
-    padding-top: 50px;
-    .column-left{
-      float: left;
-      width: 50%;
-      border-right: 1px solid black;
-      .names{
-        font-size: 35px;
-        color: #38383E;
-      }
 
-    }
-    .column-right{
-      float: right; width: 50%;
-      .names{
-        font-size: 35px;
-        color: #38383E;
-      }
-    }
+  &__header {
+    font-size: $font-size-header-secondary;
+    text-align: left;
+    border-bottom: 1px solid;
+  }
+
+  &__panel--left {
+    border-right: 1px solid;
+  }
+
+  &__panel--left, &__panel--right {
+    width: 50%;
+  }
+
+  &__img {
+    width: 40%;
+  }
+
+  &__names {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
   }
 }

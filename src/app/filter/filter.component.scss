@@ -5,6 +5,8 @@
 }
 
 .filter {
+
+
   &__title {
     font-size: $font-size-header-secondary;
     text-align: left;
@@ -22,6 +24,25 @@ mat-grid-tile {
   border-right: 1px solid $color-grey-light;
   border-bottom: 1px solid $color-grey-light;
   border-top: 1px solid $color-grey-light;
+  font-size: $font-size-small-text;
+}
+
+mat-grid-tile.no-top-border {
+  border-top: none;
+}
+
+mat-grid-tile.no-bottom-border {
+  border-bottom: none;
+}
+
+
+
+// TODO  te dwa nie dzialaja, jedynie inline'owo dzialaja w inspektorze
+label {
+  color: white !important;
+}
+span {
+  color: white;
 }
 
 //.example-form-field {

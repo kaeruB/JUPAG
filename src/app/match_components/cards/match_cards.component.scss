@@ -1,59 +1,43 @@
 @import '../../../styles/_variables.scss';
 
-.match-cards{
-  display: block;
-  alignment: center;
-  position: relative;
-  width: 1800px;
-  margin-top: 20px;
-  background-color: $color-grey;
-  height: 80rem;
-  color: black;
-  border-bottom: 1px solid black;
-  .title{
-    color: black;
-    text-decoration: underline;
-    font-size: 50px;
-    margin-right: 150rem;
-    padding-top: 30px;
+.cards {
+
+  &__container {
+    display: flex;
+    padding-top: 4rem;
   }
-  .container-cards{
-    .column-left{
-      float: left;
-      width: 50%;
-      border-right: 1px solid black;
-      .line{
-        float: left;
-        width: 50%;
-        padding: 2rem;
-        font-size: 20px;
-      }
-      .card{
-        float: right;
-        margin-left: 5rem;
-        vertical-align: center;
-        margin-top: 5rem;
-        padding: 5rem;
-      }
+
+  &__header {
+    font-size: $font-size-header-secondary;
+    text-align: left;
+    border-bottom: 1px solid;
+    padding-top: 10rem;
+  }
+
+  &__panel--left {
+    border-right: 1px solid;
+  }
+
+  &__panel--left, &__panel--right {
+    width: 50%;
+  }
+
+  &__img {
+    &--container {
+      padding-bottom: 4rem;
     }
-    .column-right{
-      float: left;
+
+    &--arrow {
       width: 50%;
-      border-right: 1px solid black;
-      .line{
-        float: right;
-        width: 50%;
-        //padding: 2rem;
-        font-size: 20px;
-        margin-right: 2rem;
-      }
-      .card{
-        float: left;
-        margin-left: 5rem;
-        vertical-align: center;
-        margin-top: 5rem;
-        padding: 5rem;
-      }
     }
+
+    &--card {
+
+    }
+  }
+
+  &__description-container {
+    display: flex;
+    flex-direction: column;
   }
 }
