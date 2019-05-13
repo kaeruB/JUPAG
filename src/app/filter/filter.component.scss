@@ -35,14 +35,20 @@ mat-grid-tile.no-bottom-border {
   border-bottom: none;
 }
 
-
-
-// TODO  te dwa nie dzialaja, jedynie inline'owo dzialaja w inspektorze
-label {
-  color: white !important;
+mat-grid-tile.no-left-border {
+  border-left: none;
 }
-span {
-  color: white;
+
+mat-grid-tile.no-right-border {
+  border-right: none;
+}
+
+mat-grid-list.mat-grid-list {
+  margin-top: 5rem;
+}
+
+figure.mat-figure {
+  font-weight: 500;
 }
 
 //.example-form-field {

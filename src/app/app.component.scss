@@ -10,6 +10,9 @@
   width: 80vw;
   font-size: $font-size-header;
 
+  background-image: linear-gradient(to left, #f6865529, #61c3592e);
+
+
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -18,7 +21,7 @@
   border-width: 1px 0 1px;
 
   &__title {
-
+    font-size: $font-size-header;
   }
 
   &__menu {

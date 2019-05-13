@@ -1,6 +1,15 @@
 :host {
-  width: 100%;
+  width: 80vw;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.home-card__match, .home-card__player, .home-card__team {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.home-card__match, .home-card__player {
+  margin-right: 5rem;
 }
