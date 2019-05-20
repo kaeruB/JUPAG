@@ -10,6 +10,7 @@ export class MatchComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    document.querySelector('.header__home--button').classList.remove('hidden');
+    document.querySelector('.subheader__button--match').classList.add('subheader__button--clicked');
   }
-
 }

@@ -11,5 +11,4 @@ export class SubheaderComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

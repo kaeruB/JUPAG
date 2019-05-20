@@ -1,3 +1,5 @@
+@import '../../styles/_variables.scss';
+
 //:host {
 //  display: flex;
 //  background: linear-gradient(to left, #f6865580, #61c3592e);
@@ -8,19 +10,36 @@
     display: flex;
     height: 5rem;
     align-items: center;
-    background: #4c8648;
+   // background: $color-tertiary;
+    border-left: 1px solid;
+    border-right: 1px solid;
   }
 
   &__button {
     flex-basis: 0;
     flex-grow: 1;
+    height: 100%;
 
     border-radius: 0;
 
-    background: #4c8648;
+    background: $color-tertiary;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--clicked {
+      background: #29292f;
+      color: $color-tertiary;
+      font-weight: bold;
+    }
   }
 
   &__button:not(:last-child) {
     border-right: 1px solid;
+  }
+
+  &__button:first-child {
+    border-left: 1px solid;
   }
 }
