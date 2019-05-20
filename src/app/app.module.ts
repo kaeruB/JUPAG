@@ -24,6 +24,7 @@ import {
 import { FooterComponent } from './footer/footer.component';
 import {MatchCardsComponent} from './match_components/cards/match_cards.component';
 import {MatchInjuriesComponent} from './match_components/injuries/match_injuries.component';
+import { SubheaderComponent } from './subheader/subheader.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {MatchInjuriesComponent} from './match_components/injuries/match_injuries
     FooterComponent,
     MatchGoalsComponent,
     MatchCardsComponent,
-    MatchInjuriesComponent
+    MatchInjuriesComponent,
+    SubheaderComponent
   ],
   imports: [
     BrowserModule,

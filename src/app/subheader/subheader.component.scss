@@ -1,0 +1,26 @@
+//:host {
+//  display: flex;
+//  background: linear-gradient(to left, #f6865580, #61c3592e);
+//}
+
+.subheader {
+  &__buttons {
+    display: flex;
+    height: 5rem;
+    align-items: center;
+    background: #4c8648;
+  }
+
+  &__button {
+    flex-basis: 0;
+    flex-grow: 1;
+
+    border-radius: 0;
+
+    background: #4c8648;
+  }
+
+  &__button:not(:last-child) {
+    border-right: 1px solid;
+  }
+}

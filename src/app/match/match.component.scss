@@ -1,23 +1,21 @@
 @import '../../styles/_variables.scss';
 
-:host {
+.match {
   font-size: $font-size-text;
   background-color: $color-grey;
   width: 80vw;
   padding: 10rem;
   padding-bottom: 20rem;
-}
 
-.header {
-  display: flex;
-  justify-content: space-around;
-  font-size: $font-size-header-secondary;
-  padding-top: 12rem;
-  padding-bottom: 17rem;
-  font-weight: bold;
-}
+  &__header {
+    display: flex;
+    justify-content: space-around;
+    font-size: $font-size-header-secondary;
+    padding-top: 12rem;
+    padding-bottom: 17rem;
+    font-weight: bold;
+  }
 
-.match {
   &__basic-info {
     display: flex;
     flex-direction: column;

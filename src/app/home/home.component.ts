@@ -3,6 +3,7 @@ import {matchLinks, playerLinks, teamLinks} from '../utils/database';
 import * as selectors from '../utils/selectors';
 import {homePlayerCardLinksSelector} from '../utils/selectors';
 import {homeTeamCardLinksSelector} from '../utils/selectors';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -19,9 +20,14 @@ export class HomeComponent implements OnInit {
   homeMatchCardLinksSelector = selectors.homeMatchCardLinksSelector;
   homePlayerCardLinksSelector = selectors.homePlayerCardLinksSelector;
   homeTeamCardLinksSelector = selectors.homeTeamCardLinksSelector;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    // console.log(this.router.url);
+    // if (this.router.url === '/home/search') {
+    //   // <app-search></app-search>
+    //   // document.querySelector('.header').insertAdjacentHTML('afterend', '<span>NYANNNN<app-search></app-search></span>');
+    // }
   }
 
 }
