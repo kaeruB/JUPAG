@@ -1,9 +1,18 @@
 <div class="shots__header u-margin-top-big">Shots on a goal</div>
 <div class="shots__container">
-  <div class="shots__panel--left">
-
+  <div class="shots__upper">
+    <span class="shots__upper--left shots__upper--header">Jawor Krzemienica <mat-icon>arrow_forward</mat-icon></span>
+    <div class="shots__upper--middle">
+      <button mat-button class="empty-ground__button" (click)="toggleTeam()">
+        <img class="empty-ground__img" src="assets/img/half-ground.png" alt="groud">
+        <mat-icon class="empty-ground__icon">mouse</mat-icon>
+      </button>
+    </div>
+    <span class="shots__upper--right shots__upper--header darken-header"><mat-icon>arrow_back</mat-icon> Wisła Kraków</span>
   </div>
-  <div class="shots__panel--right">
-
+  <div class="shots__bottom">
+    <div class="shots__timeline shots__timeline--left"></div>
+    <div class="shots__goal"></div>
+    <div class="shots__timeline shots__timeline--right"></div>
   </div>
 </div>

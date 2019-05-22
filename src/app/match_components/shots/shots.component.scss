@@ -14,11 +14,57 @@
     border-bottom: 1px solid;
   }
 
-  &__panel--left {
-    border-right: 1px solid;
+  &__upper {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--left {
+      padding-right: 2rem;
+    }
+
+    &--middle {
+      width: 15%;
+      position: relative;
+      .empty-ground__img {
+        width: 100%;
+      }
+
+      .empty-ground__icon {
+        position: absolute;
+        top: 2rem;
+        right: 50%;
+        font-size: 5rem;
+        color: black;
+      }
+    }
+
+    &--right {
+      padding-left: 2rem;
+    }
   }
 
-  &__panel--left, &__panel--right {
-    width: 50%;
+  &__bottom {
+
+    .shots__timeline {
+
+      &--left {
+
+      }
+
+      &--right {
+
+      }
+    }
+
+    .shots__goal {
+
+    }
   }
+}
+
+.darken-header {
+  color: $color-dark-text;
 }
