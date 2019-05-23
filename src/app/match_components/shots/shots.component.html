@@ -11,8 +11,42 @@
     <span class="shots__upper--right shots__upper--header darken-header"><mat-icon>arrow_back</mat-icon> Wisła Kraków</span>
   </div>
   <div class="shots__bottom">
-    <div class="shots__timeline shots__timeline--left"></div>
-    <div class="shots__goal"></div>
-    <div class="shots__timeline shots__timeline--right"></div>
+    <div class="shots__timeline shots__timeline--left">
+      <img src="../../../assets/img/arrow-down.png" alt="" class="shots__timeline--arrow">
+
+    </div>
+    <div class="shots__goal">
+      <img src="../../../assets/img/shots-on-goal.png" alt="" class="shots__goal--img">
+      <button mat-button id="ball1" class="ball-button" (click)="ballOnClick($event)">
+        <i class="fas fa-futbol ball"></i>
+      </button>
+      <button mat-button id="ball2" class="ball-button" (click)="ballOnClick($event)">
+        <i class="fas fa-futbol ball"></i>
+      </button>
+      <button mat-button id="ball3" class="ball-button" (click)="ballOnClick($event)">
+        <i class="fas fa-futbol ball"></i>
+      </button>
+      <button mat-button id="ball4" class="ball-button" (click)="ballOnClick($event)">
+        <i class="fas fa-futbol ball"></i>
+      </button>
+      <button mat-button id="ball5" class="ball-button" (click)="ballOnClick($event)">
+        <i class="fas fa-futbol ball"></i>
+      </button>
+      <button mat-button id="ball6" class="ball-button" (click)="ballOnClick($event)">
+        <i class="fas fa-futbol ball"></i>
+      </button>
+      <button mat-button id="ball7" class="ball-button" (click)="ballOnClick($event)">
+        <i class="fas fa-futbol ball"></i>
+      </button>
+      <button mat-button id="ball8" class="ball-button" (click)="ballOnClick($event)">
+         <i class="fas fa-futbol ball"></i>
+      </button>
+      <button mat-button id="ball9" class="ball-button" (click)="ballOnClick($event)">
+         <i class="fas fa-futbol ball"></i>
+      </button>
+    </div>
+    <div class="shots__timeline shots__timeline--right">
+      <img src="../../../assets/img/arrow-down.png" alt="" class="shots__timeline--arrow">
+    </div>
   </div>
 </div>

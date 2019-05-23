@@ -5,6 +5,7 @@
 
   &__container {
     display: flex;
+    flex-direction: column;
     padding-top: 4rem;
   }
 
@@ -47,8 +48,11 @@
   }
 
   &__bottom {
+    display: flex;
+    padding-top: 5rem;
 
     .shots__timeline {
+      position: relative;
 
       &--left {
 
@@ -60,7 +64,75 @@
     }
 
     .shots__goal {
+      width: 50%;
+      position: relative;
 
+      &--img {
+        width: 100%;
+      }
+
+      .ball {
+        font-size: 2.5rem;
+        color: $color-weak-ball;
+      }
+
+      .ball-button {
+        position: absolute;
+      }
+
+      #ball2 {
+        top: 40%;
+        left: 68%;
+      }
+
+      #ball3 {
+        top: 40%;
+        left: 20%;
+      }
+
+      #ball4 {
+        top: 56%;
+        left: 70%;
+      }
+
+      #ball5 {
+        top: 20%;
+        left: 76%;
+
+        i {
+          color: $color-strong-ball;
+        }
+      }
+
+      #ball6 {
+        top: 35%;
+        left: 62%;
+      }
+
+      #ball7 {
+        top: 21%;
+        left: 11%;
+      }
+
+      #ball8 {
+        top: 50%;
+        left: 30%;
+      }
+
+      #ball9 {
+        top: 17%;
+        left: 50%;
+
+        i {
+          color: $color-strong-ball;
+        }
+      }
+
+      .ball-chosen {
+        color: $color-chosen-ball !important;
+        font-size: 5rem;
+        transform: translate(-1rem, -1rem);
+      }
     }
   }
 }
