@@ -17,11 +17,11 @@ export interface Ball {
 export class ShotsComponent implements OnInit {
   team1: Ball[] = [
     {id: 'ball1', left: 10, top: 20, minute: 4, player: 'Sergio Ramos'},
-    {id: 'ball2', left: 68, top: 40, minute: 34, player: 'Sergio Ramos'},
+    {id: 'ball2', left: 68, top: 40, minute: 17, player: 'Sergio Ramos'},
     {id: 'ball3', left: 20, top: 40, minute: 66, player: 'Sergio Ramos'},
     {id: 'ball4', left: 76, top: 56, minute: 36, player: 'Sergio Ramos'},
-    {id: 'ball5', left: 62, top: 20, minute: 34, player: 'Sergio Ramos'},
-    {id: 'ball6', left: 11, top: 35, minute: 23, player: 'Sergio Ramos'},
+    {id: 'ball5', left: 62, top: 20, minute: 10, player: 'Sergio Ramos'},
+    {id: 'ball6', left: 11, top: 35, minute: 60, player: 'Sergio Ramos'},
     {id: 'ball7', left: 21, top: 21, minute: 56, player: 'Sergio Ramos'},
     {id: 'ball8', left: 30, top: 50, minute: 34, player: 'Sergio Ramos'},
     {id: 'ball9', left: 50, top: 17, minute: 23, player: 'Sergio Ramos'}
@@ -37,7 +37,7 @@ export class ShotsComponent implements OnInit {
     {id: 'ball8', left: 76, top: 56, minute: 35, player: 'Lionel Messi'},
     {id: 'ball9', left: 64, top: 25, minute: 50, player: 'Lionel Messi'}
   ];
-  currentlyUsedBallsPositions = 'team1';
+  currentlyDisplayedTeam = 'team1';
 
   constructor() { }
 
@@ -79,12 +79,12 @@ export class ShotsComponent implements OnInit {
       el.classList.toggle('darken-header');
     });
 
-    if (this.currentlyUsedBallsPositions === 'team1') {
-      this.currentlyUsedBallsPositions = 'team2';
+    if (this.currentlyDisplayedTeam === 'team1') {
+      this.currentlyDisplayedTeam = 'team2';
       this.setBallsPositionsOnGround(this.team2);
     } else {
       this.setBallsPositionsOnGround(this.team1);
-      this.currentlyUsedBallsPositions = 'team1';
+      this.currentlyDisplayedTeam = 'team1';
     }
 
     this.removeBallSelection();
@@ -101,14 +101,27 @@ export class ShotsComponent implements OnInit {
 
   ballOnClick($event) {
     this.removeBallSelection();
-    $event.currentTarget.firstChild.firstChild.classList.add('ball-chosen');
-    // console.log($event.currentTarget.firstChild.firstChild);
+
+    let eventTargetId = $event.currentTarget.id;
+    if (eventTargetId.endsWith('-timeline-' + this.currentlyDisplayedTeam)) {
+      eventTargetId = eventTargetId.replace('-timeline-' + this.currentlyDisplayedTeam, '');
+    }
+    console.log(eventTargetId);
+
+    document.querySelector('#' + eventTargetId + ' i').classList.add('ball-chosen');
+    document.querySelector('#' + eventTargetId + '-timeline-' + this.currentlyDisplayedTeam + ' i')
+      .classList.add('timeline-ball-chosen');
   }
 
   removeBallSelection() {
     const previouslySelectedBall = document.querySelector('.ball-chosen');
     if (previouslySelectedBall) {
       previouslySelectedBall.classList.remove('ball-chosen');
+    }
+
+    const previouslySelectedTimelineBall = document.querySelector('.timeline-ball-chosen');
+    if (previouslySelectedTimelineBall) {
+      previouslySelectedTimelineBall.classList.remove('timeline-ball-chosen');
     }
   }
 }
