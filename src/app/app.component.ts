@@ -16,6 +16,10 @@ export class AppComponent implements OnInit {
       document.querySelector('.header__home--button').classList.add('hidden'); // .setAttribute('display', 'none');
     }
   }
+
+  showSearchComponent() {
+    document.querySelector('app-search').classList.toggle('hidden');
+  }
 }
 
 
