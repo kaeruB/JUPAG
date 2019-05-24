@@ -64,7 +64,7 @@ export class ShotsComponent implements OnInit {
     team2.forEach( e => {
       const newBallIconOnTimelineTeam2 = document.getElementById(e.id + '-timeline-team2');
       newBallIconOnTimelineTeam2.style.top = e.minute + '%';
-      newBallIconOnTimelineTeam2.style.left = '45%';
+      newBallIconOnTimelineTeam2.style.left = '55%';
     });
   }
 
