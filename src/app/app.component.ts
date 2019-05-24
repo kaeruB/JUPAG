@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  showSearchComponent() {
+  toggleSearchComponent() {
     document.querySelector('app-search').classList.toggle('hidden');
   }
 }

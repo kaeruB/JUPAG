@@ -7,7 +7,7 @@
         <mat-form-field class="form-group">
           <input matInput placeholder="Search" id="search" [(ngModel)]="searchField" name="search" #search="ngModel">
         </mat-form-field>
-        <button mat-icon-button class="header__search--button" (click)="showSearchComponent()"><mat-icon class="header__search--icon">search</mat-icon></button>
+        <button mat-icon-button class="header__search--button" (click)="toggleSearchComponent()"><mat-icon class="header__search--icon">search</mat-icon></button>
       </div>
       <button mat-icon-button class="header__contact-button"><mat-icon class="header__contact--icon">email</mat-icon></button>
       <button routerLink="/home" mat-icon-button class="header__home--button"><mat-icon class="header__home--icon">home</mat-icon></button>
