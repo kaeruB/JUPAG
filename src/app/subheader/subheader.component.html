@@ -2,7 +2,9 @@
 <!--  <mat-icon>home</mat-icon>-->
 <!--</button>-->
 <div class="subheader__buttons">
-  <a mat-flat-button routerLink="." class="subheader__button subheader__button--match">MATCH</a>
-  <a mat-flat-button routerLink="." class="subheader__button subheader__button--player">PLAYER</a>
-  <a mat-flat-button routerLink="." class="subheader__button subheader__button--team">TEAM</a>
+  <button routerLink='/match' mat-flat-button class="subheader__button subheader__button--match">MATCH</button>
+  <button routerLink='/player' mat-flat-button class="subheader__button subheader__button--player">PLAYER</button>
+  <button routerLink='/team' mat-flat-button class="subheader__button subheader__button--team">TEAM</button>
 </div>
+<router-outlet></router-outlet>
+
