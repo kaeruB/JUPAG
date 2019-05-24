@@ -10,6 +10,7 @@ interface Card {
   victim: string;
   victimPhotoPath: string;
   minute: string;
+  positionImg: string;
 }
 
 @Component({
@@ -20,15 +21,15 @@ interface Card {
 export class MatchCardsComponent implements OnInit {
 
   team1: Card[] = [
-    {id: 'card1-left', panel: 'left', top: 20, left: 50, player: 'N\'Golo Kante', playerPhotoPath: 'assets/img/samuel.JPG',
-      victim: 'Samuel Umtiti', victimPhotoPath: 'assets/img/samuel.JPG', minute: '20\''},
+    {id: 'card1-left', panel: 'left', top: 20, left: 50, player: 'N\'Golo Kante', playerPhotoPath: 'assets/img/kante.JPG',
+      victim: 'Samuel Umtiti', victimPhotoPath: 'assets/img/samuel.JPG', minute: '20\'', positionImg: '../../../assets/img/ground-red.png'},
     {id: 'card2-left', panel: 'left', top: 60, left: 50, player: 'Keisuke Honda', playerPhotoPath: 'assets/img/honda.JPG',
-      victim: 'Shinji Kagawa', victimPhotoPath: 'assets/img/kagawa.JPG', minute: '70\''}
+      victim: 'Shinji Kagawa', victimPhotoPath: 'assets/img/kagawa.JPG', minute: '70\'', positionImg: '../../../assets/img/ground-yellow2.png'}
   ];
 
   team2: Card[] = [
     {id: 'card1-right', panel: 'right', top: 40, left: 50, player: 'Samuel Umtiti', playerPhotoPath: 'assets/img/samuel.JPG',
-      victim: 'N\'Golo Kante', victimPhotoPath: 'assets/img/samuel.JPG', minute: '40\''}
+      victim: 'N\'Golo Kante', victimPhotoPath: 'assets/img/kante.JPG', minute: '40\'', positionImg: '../../../assets/img/ground-yellow.png'}
   ];
 
   constructor() {}
@@ -46,10 +47,31 @@ export class MatchCardsComponent implements OnInit {
   }
 
   changeDescription($event) {
-    this.unselectPreviousCard(this.extractPanelFromCardId($event.currentTarget.id));
+    const panel = this.extractPanelFromCardId($event.currentTarget.id);
+    this.unselectPreviousCard(panel);
     $event.currentTarget.classList.add('chosen-card');
-    // document.querySelector('.details__img:first-child').setAttribute('src', 'assets/img/kante.JPG');
-    // document.querySelector('.details__img:nth-child(1)').setAttribute('src', 'assets/img/samuel.JPG');
+
+    // tslint:disable-next-line:max-line-length
+    panel === 'left' ? this.updateInfoOnParticularPanel(panel, this.team1, $event) : this.updateInfoOnParticularPanel(panel, this.team2, $event);
+  }
+
+  updateInfoOnParticularPanel(panel, team, $event) {
+    const panelElement = document.querySelector('.cards__panel--' + panel);
+    const playerImgElement = panelElement.querySelector('.details__img--player');
+    const playerNameElement = panelElement.querySelector('.details__name--player');
+    const victimImgElement = panelElement.querySelector('.details__img--victim');
+    const victimNameElement = panelElement.querySelector('.details__name--victim');
+    const timeElement = panelElement.querySelector('.details__time');
+    const groundImg = panelElement.querySelector('.cards__img--card');
+
+    const cardInfo = team.find( e => e.id === $event.currentTarget.id);
+
+    playerImgElement.setAttribute('src', cardInfo.playerPhotoPath);
+    playerNameElement.textContent = cardInfo.player;
+    victimImgElement.setAttribute('src', cardInfo.victimPhotoPath);
+    victimNameElement.textContent = cardInfo.victim;
+    timeElement.textContent = cardInfo.minute;
+    groundImg.setAttribute('src', cardInfo.positionImg);
   }
 
   extractPanelFromCardId(cardId): string {
