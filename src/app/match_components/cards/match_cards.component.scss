@@ -92,37 +92,16 @@
   &__timeline{
     position: relative;
 
-    &--event1 {
+    &--card {
       background: yellow;
       position: absolute;
 
-      top: 20%;
-      left: 50%;
-
-      height: 2.5rem;
-      width: 4rem;
-    }
-
-    &--event2 {
-      background: red;
-      position: absolute;
-
-      top: 60%;
-      left: 50%;
-
-      height: 2.5rem;
-      width: 4rem;
-    }
-
-    &--event3 {
-      background: yellow;
-      position: absolute;
-
-      top: 55%;
-      left: 50%;
-
-      height: 2.5rem;
+      height: 3rem;
       width: 4rem;
     }
   }
+}
+
+.chosen-card {
+  transform: scale(1.4);
 }

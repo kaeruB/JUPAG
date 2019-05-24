@@ -4,8 +4,8 @@
     <div class="cards__img--container">
       <div class="cards__timeline">
         <img src="../../../assets/img/arrow-down.png" alt="" class="cards__timeline--arrow">
-        <button mat-button class="cards__timeline--event1" (click)="chengeDescription($event)">20'</button>
-        <button mat-button class="cards__timeline--event2" (click)="chengeDescription($event)">70'</button>
+        <button mat-button id="card1-left" class="cards__timeline--card" (click)="changeDescription($event)">20'</button>
+        <button mat-button id="card2-left" class="cards__timeline--card" (click)="changeDescription($event)">70'</button>
       </div>
       <div class="cards__info">
         <div class="cards__info--details">
@@ -55,7 +55,7 @@
       </div>
       <div class="cards__timeline">
         <img src="../../../assets/img/arrow-down.png" alt="" class="cards__timeline--arrow">
-        <button mat-button  class="cards__timeline--event3">60'</button>
+        <button mat-button id="card1-right" class="cards__timeline--card" (click)="changeDescription($event)">60'</button>
       </div>
 
     </div>

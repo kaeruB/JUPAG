@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-export interface Ball {
+interface Ball {
   id: string;
   left: number;
   top: number;
