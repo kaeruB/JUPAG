@@ -1,4 +1,5 @@
 @import '../styles/_variables.scss';
+@import '../styles/abstract/_mixins.scss';
 
 .container {
   display: flex;
@@ -21,10 +22,21 @@
   border: 1px solid grey;
   border-width: 1px 0 1px;
 
+  @include respond(phone) {
+    width: 100vw;
+    flex-direction: column;
+    padding: 0;
+  }
+
   &__title {
     font-size: $font-size-header;
     width: 60%;
     text-align: left;
+
+    @include respond(phone) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__menu {
@@ -32,6 +44,11 @@
     justify-content: space-evenly;
     align-items: center;
     width: 40%;
+
+    @include respond(phone) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__search {

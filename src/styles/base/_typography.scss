@@ -6,9 +6,17 @@ body {
   color: $color-tertiary;
   background: $color-background;
   font-family: 'Nunito', sans-serif;
+
+  @include respond(phone) {
+    padding: 0;
+  }
 }
 
 .container {
   padding: 3rem;
   background: $color-background;
+
+  @include respond(phone) {
+    padding: 0;
+  }
 }

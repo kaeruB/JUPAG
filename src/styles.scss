@@ -28,6 +28,8 @@ $jupag-theme: mat-light-theme($jupag-primary, $jupag-accent, $jupag-warn);
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+@import "styles/abstract/mixins";
+
 @import "styles/base/base";
 @import "styles/base/utilities";
 @import "styles/base/typography";
