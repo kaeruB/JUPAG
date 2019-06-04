@@ -20,22 +20,22 @@ export class ShotsComponent implements OnInit {
     {id: 'ball2', left: 68, top: 40, minute: 17, player: 'Sergio Ramos'},
     {id: 'ball3', left: 20, top: 40, minute: 66, player: 'Sergio Ramos'},
     {id: 'ball4', left: 76, top: 56, minute: 36, player: 'Sergio Ramos'},
-    {id: 'ball5', left: 62, top: 20, minute: 10, player: 'Sergio Ramos'},
+    {id: 'ball5', left: 62, top: 30, minute: 10, player: 'Sergio Ramos'},
     {id: 'ball6', left: 11, top: 35, minute: 60, player: 'Sergio Ramos'},
-    {id: 'ball7', left: 21, top: 21, minute: 56, player: 'Sergio Ramos'},
+    {id: 'ball7', left: 21, top: 31, minute: 56, player: 'Sergio Ramos'},
     {id: 'ball8', left: 30, top: 50, minute: 34, player: 'Sergio Ramos'},
-    {id: 'ball9', left: 50, top: 17, minute: 23, player: 'Sergio Ramos'}
+    {id: 'ball9', left: 50, top: 30, minute: 23, player: 'Sergio Ramos'}
   ];
   team2: Ball[] = [
     {id: 'ball1', left: 15, top: 30, minute: 65, player: 'Lionel Messi'},
     {id: 'ball2', left: 23, top: 60, minute: 23, player: 'Lionel Messi'},
-    {id: 'ball3', left: 67, top: 20, minute: 54, player: 'Lionel Messi'},
+    {id: 'ball3', left: 67, top: 20, minute: 54, player: 'Jerzy Dudek'},
     {id: 'ball4', left: 73, top: 36, minute: 12, player: 'Lionel Messi'},
     {id: 'ball5', left: 26, top: 28, minute: 2, player: 'Lionel Messi'},
     {id: 'ball6', left: 16, top: 43, minute: 45, player: 'Lionel Messi'},
     {id: 'ball7', left: 24, top: 63, minute: 23, player: 'Lionel Messi'},
     {id: 'ball8', left: 76, top: 56, minute: 35, player: 'Lionel Messi'},
-    {id: 'ball9', left: 64, top: 25, minute: 50, player: 'Lionel Messi'}
+    {id: 'ball9', left: 64, top: 25, minute: 50, player: 'Shinji Kagawa'}
   ];
   currentlyDisplayedTeam = 'team1';
 

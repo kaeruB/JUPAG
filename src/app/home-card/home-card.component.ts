@@ -16,7 +16,7 @@ export class HomeCardComponent implements OnInit {
       let markup: string;
       if (link.type === 'match') {
         markup = `<mat-list-item role="listitem" class="home-card__link list-group-item u-margin-bottom-small">
-                  ${link.title} <span class="home-card__link--title">${link.date}</span>
+                      ${link.title} <span class="home-card__link--title">${link.date}</span>
                   </mat-list-item>`;
       } else if (link.type === 'player') {
         markup = `<mat-list-item role="listitem" class="home-card__link list-group-item u-margin-bottom-small" style="
