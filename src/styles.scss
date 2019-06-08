@@ -40,3 +40,16 @@ $jupag-theme: mat-light-theme($jupag-primary, $jupag-accent, $jupag-warn);
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-form-field-empty.mat-form-field-label {
+  color: $color-tertiary;
+}
+
+.mat-form-field-underline {
+  background-color: $color-tertiary;
+}
+
+.mat-form-field-flex:focus {
+  background-color: $color-tertiary;
+}

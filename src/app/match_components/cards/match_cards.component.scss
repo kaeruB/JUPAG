@@ -93,7 +93,6 @@
     position: relative;
 
     &--card {
-      background: yellow;
       position: absolute;
 
       height: 3rem;
@@ -104,4 +103,12 @@
 
 .chosen-card {
   transform: scale(1.4);
+}
+
+.card--yellow {
+  background: yellow;
+}
+
+.card--red {
+  background: red;
 }

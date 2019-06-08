@@ -18,24 +18,24 @@ export class ShotsComponent implements OnInit {
   team1: Ball[] = [
     {id: 'ball1', left: 10, top: 20, minute: 4, player: 'Sergio Ramos'},
     {id: 'ball2', left: 68, top: 40, minute: 17, player: 'Sergio Ramos'},
-    {id: 'ball3', left: 20, top: 40, minute: 66, player: 'Sergio Ramos'},
-    {id: 'ball4', left: 76, top: 56, minute: 36, player: 'Sergio Ramos'},
+    {id: 'ball3', left: 20, top: 40, minute: 66, player: 'N\'Golo Kante'},
+    {id: 'ball4', left: 76, top: 56, minute: 39, player: 'Sergio Ramos'},
     {id: 'ball5', left: 62, top: 30, minute: 10, player: 'Sergio Ramos'},
     {id: 'ball6', left: 11, top: 35, minute: 60, player: 'Sergio Ramos'},
     {id: 'ball7', left: 21, top: 31, minute: 56, player: 'Sergio Ramos'},
     {id: 'ball8', left: 30, top: 50, minute: 34, player: 'Sergio Ramos'},
-    {id: 'ball9', left: 50, top: 30, minute: 23, player: 'Sergio Ramos'}
+    {id: 'ball9', left: 50, top: 30, minute: 23, player: 'Luis Suárez'}
   ];
   team2: Ball[] = [
     {id: 'ball1', left: 15, top: 30, minute: 65, player: 'Lionel Messi'},
-    {id: 'ball2', left: 23, top: 60, minute: 23, player: 'Lionel Messi'},
-    {id: 'ball3', left: 67, top: 20, minute: 54, player: 'Jerzy Dudek'},
+    {id: 'ball2', left: 23, top: 60, minute: 23, player: 'Shinji Kagawa'},
+    {id: 'ball3', left: 67, top: 20, minute: 54, player: 'Samuel Umtiti'},
     {id: 'ball4', left: 73, top: 36, minute: 12, player: 'Lionel Messi'},
-    {id: 'ball5', left: 26, top: 28, minute: 2, player: 'Lionel Messi'},
+    {id: 'ball5', left: 26, top: 28, minute: 2, player: 'Shinji Kagawa'},
     {id: 'ball6', left: 16, top: 43, minute: 45, player: 'Lionel Messi'},
-    {id: 'ball7', left: 24, top: 63, minute: 23, player: 'Lionel Messi'},
-    {id: 'ball8', left: 76, top: 56, minute: 35, player: 'Lionel Messi'},
-    {id: 'ball9', left: 64, top: 25, minute: 50, player: 'Shinji Kagawa'}
+    {id: 'ball7', left: 24, top: 27, minute: 28, player: 'Lionel Messi'},
+    {id: 'ball8', left: 76, top: 56, minute: 35, player: 'Jerzy Dudek'},
+    {id: 'ball9', left: 64, top: 25, minute: 50, player: 'Lionel Messi'}
   ];
   currentlyDisplayedTeam = 'team1';
 
@@ -55,16 +55,23 @@ export class ShotsComponent implements OnInit {
   }
 
   setBallsPositionsOnTimeline(team1, team2) {
+    // newBallIcon.textContent = e.player;
     team1.forEach( e => {
       const newBallIconOnTimelineTeam1 = document.getElementById(e.id + '-timeline-team1');
       newBallIconOnTimelineTeam1.style.top = e.minute + '%';
-      newBallIconOnTimelineTeam1.style.left = '0%';
+      newBallIconOnTimelineTeam1.style.left = '-10%';
+
+      const newBallIconSpan = newBallIconOnTimelineTeam1.querySelector('span span');
+      newBallIconSpan.textContent = e.minute + '\' ' + e.player;
     });
 
     team2.forEach( e => {
       const newBallIconOnTimelineTeam2 = document.getElementById(e.id + '-timeline-team2');
       newBallIconOnTimelineTeam2.style.top = e.minute + '%';
       newBallIconOnTimelineTeam2.style.left = '55%';
+
+      const newBallIconSpan = newBallIconOnTimelineTeam2.querySelector('span span');
+      newBallIconSpan.textContent = e.minute + '\' ' + e.player;
     });
   }
 

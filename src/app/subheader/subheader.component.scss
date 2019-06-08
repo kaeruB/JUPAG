@@ -10,9 +10,6 @@
     display: flex;
     height: 5rem;
     align-items: center;
-   // background: $color-tertiary;
-    border-left: 1px solid;
-    border-right: 1px solid;
   }
 
   &__button {
@@ -37,9 +34,5 @@
 
   &__button:not(:last-child) {
     border-right: 1px solid;
-  }
-
-  &__button:first-child {
-    border-left: 1px solid;
   }
 }

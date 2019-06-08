@@ -1,21 +1,21 @@
-<div class="goals__header">Goals</div>
+<div class="goals__header">Goals by body parts</div>
 <div class="goals__container">
   <div class="goals__panel--left">
-    <div class="goals__picture">
-      <img src="../../../assets/img/body2.png" alt="injuries" class="goals__img">
-    </div>
     <div class="goals__names">
-      <span>1. Luis Suárez</span>
-      <span>2. Sergio Ramos</span>
-      <span>3. Sergio Ramos</span>
+      <button mat-stroked-button (click)="chanePictureLeft($event)" id="shooter1">Luis Suárez</button>
+      <button mat-stroked-button (click)="chanePictureLeft($event)" id="shooter4">N'Golo Kante</button>
+    </div>
+    <div class="goals__picture">
+      <img src="../../../assets/img/goals/0.png" alt="injuries" class="goals__img">
     </div>
   </div>
   <div class="goals__panel--right">
     <div class="goals__picture">
-      <img src="../../../assets/img/body3.png" alt="injuries" class="goals__img">
+      <img src="../../../assets/img/goals/0.png" alt="injuries" class="goals__img">
     </div>
-    <div class="names">
-      <div>1. Lionel Messi</div>
+    <div class="goals__names">
+      <button mat-stroked-button (click)="changePictureRight($event)" id="shooter2">Lionel Messi</button>
+      <button mat-stroked-button (click)="changePictureRight($event)" id="shooter3">Samuel Umtiti</button>
     </div>
   </div>
 </div>
