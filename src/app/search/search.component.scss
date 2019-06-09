@@ -7,8 +7,8 @@
   padding: 6rem;
   border-radius: 5px;
 
-  background: $color-bright; //$color-grey;
-  color: $color-dark-text; // $color-light;
+  background: $color-background; // $color-grey;
+  color: $color-light;
 }
 
 .search__title {
@@ -33,7 +33,7 @@
 
 .result {
   padding: 1rem;
-  background: $color-bright;
+  background: $color-background;
   width: 30%;
 
   &__title {
@@ -44,17 +44,17 @@
   &__list {
     height: 30rem;
     overflow: auto;
-    background: $color-bright;
+    background: $color-background;
   }
 }
 
 table {
   width: 100%;
-  background: $color-bright;
+  background: $color-background;
 }
 
 tr.mat-row {
-  background: $color-bright;
+  background: $color-background;
 }
 
 tr.mat-footer-row {

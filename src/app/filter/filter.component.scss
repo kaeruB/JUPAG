@@ -20,10 +20,7 @@
 }
 
 mat-grid-tile {
-  border-left: 1px solid $color-grey-light;
-  border-right: 1px solid $color-grey-light;
-  border-bottom: 1px solid $color-grey-light;
-  border-top: 1px solid $color-grey-light;
+  border: 1px solid $color-grey-light;
   font-size: $font-size-small-text;
 }
 
@@ -41,10 +38,6 @@ mat-grid-tile.no-left-border {
 
 mat-grid-tile.no-right-border {
   border-right: none;
-}
-
-mat-grid-list.mat-grid-list {
-  margin-top: 5rem;
 }
 
 figure.mat-figure {
