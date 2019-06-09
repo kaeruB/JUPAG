@@ -5,8 +5,6 @@
 }
 
 .filter {
-
-
   &__title {
     font-size: $font-size-header-secondary;
     text-align: left;
@@ -20,7 +18,7 @@
 }
 
 mat-grid-tile {
-  border: 1px solid $color-grey-light;
+ // border: 1px solid $color-grey-light;
   font-size: $font-size-small-text;
 }
 
@@ -53,3 +51,25 @@ figure.mat-figure {
     font-size: $font-size-section-header !important;
   }
 }
+
+.match-title, .match-filters {
+  background: $color-filter-match;
+}
+
+.player-title, .player-filters {
+  background: $color-filter-player;
+}
+
+.team-title, .team-filters {
+  background: $color-filter-team;
+}
+
+.player-team-filters {
+  background: #13060e;
+}
+
+.match-player-team-filters {
+  background-image: linear-gradient(to right bottom, #845A6D, #010001);
+}
+
+// background-image: linear-gradient(to left, #f6865529, #61c3592e);

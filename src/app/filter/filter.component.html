@@ -1,11 +1,12 @@
 <h2 class="filter__title u-margin-top-medium">Filter</h2>
 
-<mat-grid-list cols="3" rowHeight="100px">
-  <mat-grid-tile [colspan]="1" [rowspan]="1" class="filter__subtitle no-top-border no-left-border no-right-border">Match</mat-grid-tile>
-  <mat-grid-tile [colspan]="1" [rowspan]="1" class="filter__subtitle no-top-border no-left-border no-right-border">Player</mat-grid-tile>
-  <mat-grid-tile [colspan]="1" [rowspan]="1" class="filter__subtitle no-top-border no-left-border no-right-border">Team</mat-grid-tile>
 
-  <mat-grid-tile [colspan]="1" [rowspan]="2" class="no-top-border no-bottom-border no-right-border no-left-border">
+<mat-grid-list cols="3" rowHeight="100px">
+  <mat-grid-tile [colspan]="1" [rowspan]="1" class="filter__subtitle no-top-border no-left-border no-right-border match-title">Match</mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="1" class="filter__subtitle no-top-border no-left-border no-right-border player-title">Player</mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="1" class="filter__subtitle no-top-border no-left-border no-right-border team-title">Team</mat-grid-tile>
+
+  <mat-grid-tile [colspan]="1" [rowspan]="2" class="no-top-border no-bottom-border no-right-border no-left-border match-filters">
     <mat-form-field style="width: 30%; height: 30%; margin-left: 10%;">
       <label>
         <input style="width: 60%; height: 50%;" matInput [matDatepicker]="pickerDateFrom" placeholder="Date (from)">
@@ -25,7 +26,7 @@
     </mat-form-field>
 
   </mat-grid-tile>
-  <mat-grid-tile [colspan]="1" [rowspan]="1" class="no-top-border no-bottom-border no-right-border">
+  <mat-grid-tile [colspan]="1" [rowspan]="1" class="no-top-border no-bottom-border no-right-border player-filters">
     <mat-form-field style="width: 30%; height: 30%; margin-left: 10%;">
       <mat-select [(ngModel)]="ageFrom" placeholder="Age (from)" style="width: 100%; height: 50%;">
         <mat-option *ngFor="let num of ageValues" [value]="num">{{ num }}</mat-option>
@@ -40,7 +41,7 @@
       </mat-select>
     </mat-form-field>
   </mat-grid-tile>
-  <mat-grid-tile [colspan]="1" [rowspan]="2" class="no-top-border no-right-border">
+  <mat-grid-tile [colspan]="1" [rowspan]="2" class="no-top-border no-right-border team-filters">
     <mat-form-field style="width: 60%; height: 30%; margin-left: 10%; margin-right: 10%;">
       <label>
         <input matInput type="text" placeholder="Trainer" [(ngModel)]="trainer" style="width: 80%; height: 50%;">
@@ -51,7 +52,7 @@
     </mat-form-field>
   </mat-grid-tile>
 
-  <mat-grid-tile [colspan]="1" [rowspan]="1" class="no-top-border no-right-border">
+  <mat-grid-tile [colspan]="1" [rowspan]="1" class="no-top-border no-right-border player-filters">
     <mat-form-field style="width: 40%; height: 30%; margin-left: 10%;">
       <label>
         <input matInput type="text" placeholder="Position" [(ngModel)]="position" style="width: 70%; height: 50%;">
@@ -73,7 +74,7 @@
     </mat-form-field>
   </mat-grid-tile>
 
-  <mat-grid-tile [colspan]="1" [rowspan]="2" class="no-top-border no-bottom-border no-right-border no-left-border">
+  <mat-grid-tile [colspan]="1" [rowspan]="2" class="no-top-border no-bottom-border no-right-border no-left-border match-filters">
     <mat-form-field style="width: 60%; height: 30%; margin-left: 10%; margin-right: 10%;">
       <label>
         <input matInput type="text" placeholder="Place" [(ngModel)]="place" style="width: 80%; height: 50%;">
@@ -83,7 +84,7 @@
       </label>
     </mat-form-field>
   </mat-grid-tile>
-  <mat-grid-tile [colspan]="2" [rowspan]="1" class="no-top-border no-bottom-border no-right-border">
+  <mat-grid-tile [colspan]="2" [rowspan]="1" class="no-top-border no-bottom-border no-right-border player-team-filters">
     <mat-form-field style="width: 25%; height: 60%;">
       <label>
         <input style="width: 75%; height: 50%;" matInput [matDatepicker]="pickerActiveFrom" placeholder="Active (from)">
@@ -114,7 +115,7 @@
     </mat-form-field>
   </mat-grid-tile>
 
-  <mat-grid-tile [colspan]="2" [rowspan]="1" class="no-top-border no-bottom-border no-right-border">
+  <mat-grid-tile [colspan]="2" [rowspan]="1" class="no-top-border no-bottom-border no-right-border player-team-filters">
     <mat-form-field style="width: 30%; height: 30%; margin-left: 10%;">
       <mat-select [(ngModel)]="wonMatchesFrom" placeholder="Won matches (from)" style="width: 100%; height: 50%;">
         <mat-option *ngFor="let num of matchesValues" [value]="num">{{ num }}</mat-option>
@@ -131,7 +132,7 @@
   </mat-grid-tile>
 
   <mat-grid-tile [colspan]="1" [rowspan]="1" class="no-top-border no-right-border no-left-border"></mat-grid-tile>
-  <mat-grid-tile [colspan]="2" [rowspan]="1" class="no-top-border no-right-border">
+  <mat-grid-tile [colspan]="2" [rowspan]="1" class="no-top-border no-right-border player-team-filters">
     <mat-form-field style="width: 30%; height: 30%; margin-left: 10%;">
       <mat-select [(ngModel)]="lostMatchesFrom" placeholder="Lost matches (from)" style="width: 100%; height: 50%;">
         <mat-option *ngFor="let num of matchesValues" [value]="num">{{ num }}</mat-option>
@@ -147,7 +148,7 @@
     </mat-form-field>
   </mat-grid-tile>
 
-  <mat-grid-tile [colspan]="3" [rowspan]="1" class="no-top-border no-bottom-border no-left-border no-right-border">
+  <mat-grid-tile [colspan]="3" [rowspan]="1" class="no-top-border no-bottom-border no-left-border no-right-border match-player-team-filters">
     <mat-form-field style="width: 20%; height: 30%;">
       <label>
         <input matInput type="text" placeholder="Season" [(ngModel)]="season" style="width: 70%; height: 50%;">
@@ -174,7 +175,7 @@
     </mat-form-field>
   </mat-grid-tile>
 
-  <mat-grid-tile [colspan]="3" [rowspan]="1" class="no-top-border no-right-border no-left-border">
+  <mat-grid-tile [colspan]="3" [rowspan]="1" class="no-top-border no-right-border no-left-border match-player-team-filters">
     <mat-form-field style="width: 20%; height: 30%;">
       <mat-select [(ngModel)]="yellowFlagsFrom" placeholder="Yellow flags (from)" style="width: 100%; height: 50%;">
         <mat-option *ngFor="let num of flagsValues" [value]="num">{{ num }}</mat-option>

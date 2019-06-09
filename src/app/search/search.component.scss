@@ -5,9 +5,10 @@
   align-items: center;
   flex-direction: column;
   padding: 6rem;
-  border-radius: 5px;
+  width: 80vw;
+  margin-bottom: 5rem;
 
-  background: $color-background; // $color-grey;
+  background: $color-background-darker; // $color-grey;
   color: $color-light;
 }
 
@@ -28,6 +29,7 @@
     justify-content: space-between;
     align-items: baseline;
     padding-bottom: 3rem;
+
   }
 }
 
