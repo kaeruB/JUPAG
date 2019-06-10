@@ -15,6 +15,10 @@
   &__subtitle {
     font-size: $font-size-header-tertiary;
   }
+
+  &__custom-row {
+    display: flex;
+  }
 }
 
 mat-grid-tile {
@@ -72,4 +76,14 @@ figure.mat-figure {
   background-image: linear-gradient(to right bottom, #845A6D, #010001);
 }
 
+.empty-grid-part {
+  background: #845a6d2e;
+}
+
 // background-image: linear-gradient(to left, #f6865529, #61c3592e);
+
+
+///deep/ .match-filters .mat-figure {
+//  flex-direction: column;
+//  align-items: flex-start;
+//}

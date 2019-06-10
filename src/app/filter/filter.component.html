@@ -6,7 +6,7 @@
   <mat-grid-tile [colspan]="1" [rowspan]="1" class="filter__subtitle no-top-border no-left-border no-right-border player-title">Player</mat-grid-tile>
   <mat-grid-tile [colspan]="1" [rowspan]="1" class="filter__subtitle no-top-border no-left-border no-right-border team-title">Team</mat-grid-tile>
 
-  <mat-grid-tile [colspan]="1" [rowspan]="2" class="no-top-border no-bottom-border no-right-border no-left-border match-filters">
+  <mat-grid-tile [colspan]="1" [rowspan]="1" class="match-filters">
     <mat-form-field style="width: 30%; height: 30%; margin-left: 10%;">
       <label>
         <input style="width: 60%; height: 50%;" matInput [matDatepicker]="pickerDateFrom" placeholder="Date (from)">
@@ -25,7 +25,29 @@
       </label>
     </mat-form-field>
 
+<!--    <div class="filter__custom-row">-->
+<!--        <label>-->
+<!--          <input style="width: 60%; height: 50%;" matInput [matDatepicker]="pickerDateFrom" placeholder="Date (from)">-->
+<!--          <mat-datepicker-toggle matSuffix [for]="pickerDateFrom"></mat-datepicker-toggle>-->
+<!--          <mat-datepicker #pickerDateFrom></mat-datepicker>-->
+<!--        </label>-->
+
+<!--        <label>-->
+<!--          <input style="width: 60%; height: 50%;" matInput [matDatepicker]="pickerDateTo" placeholder="Date (to)">-->
+<!--          <mat-datepicker-toggle matSuffix [for]="pickerDateTo"></mat-datepicker-toggle>-->
+<!--          <mat-datepicker #pickerDateTo></mat-datepicker>-->
+<!--        </label>-->
+<!--    </div>-->
+<!--    <div class="filter__custom-row">-->
+<!--        <label>-->
+<!--          <input matInput type="text" placeholder="Place" [(ngModel)]="place" style="width: 80%; height: 50%;">-->
+<!--          <button mat-button *ngIf="place" matSuffix mat-icon-button aria-label="Clear" (click)="place=''">-->
+<!--            <mat-icon>close</mat-icon>-->
+<!--          </button>-->
+<!--        </label>-->
+<!--    </div>-->
   </mat-grid-tile>
+
   <mat-grid-tile [colspan]="1" [rowspan]="1" class="no-top-border no-bottom-border no-right-border player-filters">
     <mat-form-field style="width: 30%; height: 30%; margin-left: 10%;">
       <mat-select [(ngModel)]="ageFrom" placeholder="Age (from)" style="width: 100%; height: 50%;">
@@ -41,11 +63,22 @@
       </mat-select>
     </mat-form-field>
   </mat-grid-tile>
-  <mat-grid-tile [colspan]="1" [rowspan]="2" class="no-top-border no-right-border team-filters">
+  <mat-grid-tile [colspan]="1" [rowspan]="1" class="no-top-border no-right-border team-filters">
     <mat-form-field style="width: 60%; height: 30%; margin-left: 10%; margin-right: 10%;">
       <label>
         <input matInput type="text" placeholder="Trainer" [(ngModel)]="trainer" style="width: 80%; height: 50%;">
         <button mat-button *ngIf="trainer" matSuffix mat-icon-button aria-label="Clear" (click)="trainer=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </label>
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="1" [rowspan]="1" class="no-top-border no-bottom-border no-right-border no-left-border match-filters">
+    <mat-form-field style="width: 60%; height: 30%; margin-left: 10%; margin-right: 10%;">
+      <label>
+        <input matInput type="text" placeholder="Place" [(ngModel)]="place" style="width: 80%; height: 50%;">
+        <button mat-button *ngIf="place" matSuffix mat-icon-button aria-label="Clear" (click)="place=''">
           <mat-icon>close</mat-icon>
         </button>
       </label>
@@ -74,16 +107,19 @@
     </mat-form-field>
   </mat-grid-tile>
 
-  <mat-grid-tile [colspan]="1" [rowspan]="2" class="no-top-border no-bottom-border no-right-border no-left-border match-filters">
+  <mat-grid-tile [colspan]="1" [rowspan]="1" class="no-top-border no-right-border team-filters">
     <mat-form-field style="width: 60%; height: 30%; margin-left: 10%; margin-right: 10%;">
       <label>
-        <input matInput type="text" placeholder="Place" [(ngModel)]="place" style="width: 80%; height: 50%;">
-        <button mat-button *ngIf="place" matSuffix mat-icon-button aria-label="Clear" (click)="place=''">
+        <input matInput type="text" placeholder="Trainer" [(ngModel)]="trainer" style="width: 80%; height: 50%;">
+        <button mat-button *ngIf="trainer" matSuffix mat-icon-button aria-label="Clear" (click)="trainer=''">
           <mat-icon>close</mat-icon>
         </button>
       </label>
     </mat-form-field>
   </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="1" [rowspan]="3" class="empty-grid-part"></mat-grid-tile>
+
   <mat-grid-tile [colspan]="2" [rowspan]="1" class="no-top-border no-bottom-border no-right-border player-team-filters">
     <mat-form-field style="width: 25%; height: 60%;">
       <label>
@@ -131,7 +167,6 @@
     </mat-form-field>
   </mat-grid-tile>
 
-  <mat-grid-tile [colspan]="1" [rowspan]="1" class="no-top-border no-right-border no-left-border"></mat-grid-tile>
   <mat-grid-tile [colspan]="2" [rowspan]="1" class="no-top-border no-right-border player-team-filters">
     <mat-form-field style="width: 30%; height: 30%; margin-left: 10%;">
       <mat-select [(ngModel)]="lostMatchesFrom" placeholder="Lost matches (from)" style="width: 100%; height: 50%;">
