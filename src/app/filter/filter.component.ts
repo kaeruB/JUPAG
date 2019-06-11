@@ -8,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 export class FilterComponent implements OnInit {
   dateFrom;
   dateTo;
-  place = 'Chosen place';
+  place;
 
   ageFrom;
   ageTo;
