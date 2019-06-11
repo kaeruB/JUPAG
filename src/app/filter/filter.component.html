@@ -75,7 +75,7 @@
   </mat-grid-tile>
 
   <mat-grid-tile [colspan]="1" [rowspan]="1" class="no-top-border no-bottom-border no-right-border no-left-border match-filters">
-    <mat-form-field style="width: 60%; height: 30%; margin-right: 10%;">
+    <mat-form-field style="width: 60%; height: 30%; margin-left: 10%; margin-right: 10%;">
       <label>
         <input matInput type="text" placeholder="Place" [(ngModel)]="place" style="width: 80%; height: 50%;">
         <button mat-button *ngIf="place" matSuffix mat-icon-button aria-label="Clear" (click)="place=''">
