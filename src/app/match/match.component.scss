@@ -1,30 +1,77 @@
 @import '../../styles/_variables.scss';
 
-.match {
-  font-size: $font-size-text;
-  background-color: #29292f; // $color-grey;
-  width: 80vw;
-  padding: 10rem 10rem 20rem 10rem;
-  border-top: 0;
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
 
-  &__header {
-    display: flex;
-    justify-content: space-around;
-    font-size: $font-size-header-secondary;
-    padding-top: 12rem;
-    padding-bottom: 17rem;
-    font-weight: bold;
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .match {
+    font-size: $font-size-text;
+    background-color: hotpink;
+    width: 80vw;
+    padding: 5rem;
+    border-top: 0;
+
+    &__header {
+      display: flex;
+      justify-content: space-around;
+      font-size: $font-size-header-secondary;
+      padding-top: 12rem;
+      padding-bottom: 17rem;
+      font-weight: bold;
+    }
+
+    &__basic-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 2rem;
+      border-top: 1px solid;
+
+      span {
+        padding-top: 2rem;
+      }
+    }
   }
 
-  &__basic-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 2rem;
-    border-top: 1px solid;
+}
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
 
-    span {
-      padding-top: 2rem;
+@media (min-width: 1281px) {
+
+  //CSS
+
+  .match {
+    font-size: $font-size-text;
+    background-color: #29292f; // $color-grey;
+    width: 80vw;
+    padding: 10rem 10rem 20rem 10rem;
+    border-top: 0;
+
+    &__header {
+      display: flex;
+      justify-content: space-around;
+      font-size: $font-size-header-secondary;
+      padding-top: 12rem;
+      padding-bottom: 17rem;
+      font-weight: bold;
+    }
+
+    &__basic-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 2rem;
+      border-top: 1px solid;
+
+      span {
+        padding-top: 2rem;
+      }
     }
   }
 }
