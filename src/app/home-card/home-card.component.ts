@@ -15,7 +15,12 @@ export class HomeCardComponent implements OnInit {
     this.links.forEach( link => {
       let markup: string;
       if (link.type === 'match') {
-        markup = `<mat-list-item role="listitem" class="home-card__link list-group-item u-margin-bottom-small">
+        markup = `<mat-list-item role="listitem" class="home-card__link list-group-item u-margin-bottom-small" style="
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            padding-left: 3rem;
+        ">
                       ${link.title} <span class="home-card__link--title">${link.date}</span>
                   </mat-list-item>`;
       } else if (link.type === 'player') {
@@ -40,7 +45,12 @@ export class HomeCardComponent implements OnInit {
                   ${link.title}
                   </mat-list-item>`;
       } else {
-        markup = `<mat-list-item role="listitem" class="home-card__link list-group-item u-margin-bottom-small">
+        markup = `<mat-list-item role="listitem" class="home-card__link list-group-item u-margin-bottom-small" style="
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            padding-left: 3rem;
+        ">
                   ${link.flag}
                   ${link.title}
                   </mat-list-item>`;

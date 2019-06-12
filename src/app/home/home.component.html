@@ -3,12 +3,187 @@
 <!--<router-outlet></router-outlet>-->
 
 
+<!--<div class="home-card__match">-->
+<!--  <app-home-card [links]=matchLinks [cardTitle]=matchString [linksListSelector]=homeMatchCardLinksSelector></app-home-card>-->
+<!--</div>-->
+<!--<div class="home-card__player">-->
+<!--  <app-home-card [links]=playerLinks [cardTitle]=playerString [linksListSelector]=homePlayerCardLinksSelector></app-home-card>-->
+<!--</div>-->
+<!--<div class="home-card__team">-->
+<!-- <app-home-card [links]=teamLinks [cardTitle]=teamString [linksListSelector]=homeTeamCardLinksSelector></app-home-card>-->
+<!--</div>-->
+
+
+
+
 <div class="home-card__match">
-  <app-home-card [links]=matchLinks [cardTitle]=matchString [linksListSelector]=homeMatchCardLinksSelector></app-home-card>
+  <div class="home-card">
+    <a href="/match" class="home-card__title u-padding-top-medium u-margin-bottom-medium custom-link">
+      <h2 class="home-card__title">Match</h2>
+    </a>
+    <div class="home-card__links">
+      <a href="/match" class="home-card__link home-card__link--column u-margin-bottom-medium custom-link">
+          <span class="home-card__info home-card__info--bold">FC Barcelona - Nippon Tokyo</span>
+          <span class="home-card__date">22.05.2019</span>
+      </a>
+
+      <a href="/match" class="home-card__link home-card__link--column u-margin-bottom-medium custom-link">
+          <span class="home-card__info home-card__info--bold">Real Madryt - FC Barcelona</span>
+          <span class="home-card__date">20.05.2019</span>
+      </a>
+
+      <a href="/match" class="home-card__link home-card__link--column u-margin-bottom-medium custom-link">
+          <span class="home-card__info home-card__info--bold">Manchester United F.C. - Liverpool F.C.</span>
+          <span class="home-card__date">18.05.2019</span>
+      </a>
+
+      <a href="/match" class="home-card__link home-card__link--column u-margin-bottom-medium custom-link">
+          <span class="home-card__info home-card__info--bold">Arsenal F.C. - Tottenham Hotspur F.C.</span>
+          <span class="home-card__date">18.05.2019</span>
+      </a>
+
+      <a href="/match" class="home-card__link home-card__link--column u-margin-bottom-medium custom-link">
+          <span class="home-card__info home-card__info--bold">Juventus F.C. - Ajax Amsterdam</span>
+          <span class="home-card__date">18.05.2019</span>
+      </a>
+    </div>
+  </div>
 </div>
+
 <div class="home-card__player">
-  <app-home-card [links]=playerLinks [cardTitle]=playerString [linksListSelector]=homePlayerCardLinksSelector></app-home-card>
+  <div class="home-card">
+    <a class="home-card__title u-padding-top-medium u-margin-bottom-medium custom-link">
+      <h2 class="home-card__title">Best Players</h2>
+    </a>
+    <div class="home-card__links">
+
+      <div class="home-card__link u-margin-bottom-medium">
+        <div class="home-card__link--left home-card__link--row-oriented">
+          <div class="card-description">
+            <span class="home-card__info home-card__info--bold">N'Golo Kante</span>
+            <span class="home-card__info">Goals number: 42</span>
+          </div>
+        </div>
+        <div class="home-card__link--right">
+          <figure class="home-card__img--shape">
+            <img class="home-card__img" src="assets/img/kante.JPG" alt="player's photo">
+          </figure>
+        </div>
+      </div>
+
+      <div class="home-card__link u-margin-bottom-medium">
+        <div class="home-card__link--left home-card__link--row-oriented">
+          <div class="card-description">
+            <span class="home-card__info home-card__info--bold">Keisuke Honda</span>
+            <span class="home-card__info">Goals number: 39</span>
+          </div>
+        </div>
+        <div class="home-card__link--right">
+          <figure class="home-card__img--shape">
+            <img class="home-card__img" src="assets/img/honda.JPG" alt="player's photo">
+          </figure>
+        </div>
+      </div>
+
+      <div class="home-card__link u-margin-bottom-medium">
+        <div class="home-card__link--left home-card__link--row-oriented">
+          <div class="card-description">
+            <span class="home-card__info home-card__info--bold">Shinji Kagawa</span>
+            <span class="home-card__info">Goals number: 37</span>
+          </div>
+        </div>
+        <div class="home-card__link--right">
+          <figure class="home-card__img--shape">
+            <img class="home-card__img" src="assets/img/kagawa.JPG" alt="player's photo">
+          </figure>
+        </div>
+      </div>
+
+      <div class="home-card__link u-margin-bottom-medium">
+        <div class="home-card__link--left home-card__link--row-oriented">
+          <div class="card-description">
+            <span class="home-card__info home-card__info--bold">Samuel Umtiti</span>
+            <span class="home-card__info">Goals number: 30</span>
+          </div>
+        </div>
+        <div class="home-card__link--right">
+          <figure class="home-card__img--shape">
+            <img class="home-card__img" src="assets/img/samuel.JPG" alt="player's photo">
+          </figure>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
+
 <div class="home-card__team">
- <app-home-card [links]=teamLinks [cardTitle]=teamString [linksListSelector]=homeTeamCardLinksSelector></app-home-card>
+  <div class="home-card">
+    <a class="home-card__title u-padding-top-medium u-margin-bottom-medium custom-link">
+      <h2 class="home-card__title">Best Teams</h2>
+    </a>
+    <div class="home-card__links">
+      <div class="home-card__link u-margin-bottom-medium">
+        <div class="home-card__link--left home-card__link--row-oriented">
+          <div class="card-description">
+            <span class="home-card__info home-card__info--bold">Tottenham Hotspur</span>
+            <span class="home-card__info">Group: A</span>
+            <span class="home-card__info">Points: 15</span>
+          </div>
+        </div>
+        <div class="home-card__link--right">
+          <figure class="home-card__img--shape">
+            <img class="home-card__img home-card__img--small" src="assets/img/logos/totenham.png" alt="team's photo">
+          </figure>
+        </div>
+      </div>
+
+      <div class="home-card__link u-margin-bottom-medium">
+        <div class="home-card__link--left home-card__link--row-oriented">
+          <div class="card-description">
+            <span class="home-card__info home-card__info--bold">Liverpool</span>
+            <span class="home-card__info">Group: B</span>
+            <span class="home-card__info">Points: 14</span>
+          </div>
+        </div>
+        <div class="home-card__link--right">
+          <figure class="home-card__img--shape">
+            <img class="home-card__img home-card__img--small" src="assets/img/logos/lfc.JPG" alt="team's photo">
+          </figure>
+        </div>
+      </div>
+
+      <div class="home-card__link u-margin-bottom-medium">
+        <div class="home-card__link--left home-card__link--row-oriented">
+          <div class="card-description">
+            <span class="home-card__info home-card__info--bold">Newcastle</span>
+            <span class="home-card__info">Group: C</span>
+            <span class="home-card__info">Points: 13</span>
+          </div>
+        </div>
+        <div class="home-card__link--right">
+          <figure class="home-card__img--shape">
+            <img class="home-card__img home-card__img--small" src="assets/img/logos/newcastle.png" alt="team's photo">
+          </figure>
+        </div>
+      </div>
+
+      <div class="home-card__link u-margin-bottom-medium">
+        <div class="home-card__link--left home-card__link--row-oriented">
+          <div class="card-description">
+            <span class="home-card__info home-card__info--bold">Barcelona</span>
+            <span class="home-card__info">Group: D</span>
+            <span class="home-card__info">Points: 13</span>
+          </div>
+        </div>
+        <div class="home-card__link--right">
+          <figure class="home-card__img--shape">
+            <img class="home-card__img home-card__img--small" src="assets/img/logos/barcelona.png" alt="team's photo">
+          </figure>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
+

@@ -12,8 +12,8 @@ export class HomeComponent {
   playerLinks = playerLinks;
   teamLinks = teamLinks;
   matchString = 'Match'; // could not pass a string in html to child's component, maybe there's a better way
-  playerString = 'Player';
-  teamString = 'Team';
+  playerString = 'Best Players';
+  teamString = 'Best Teams';
   homeMatchCardLinksSelector = selectors.homeMatchCardLinksSelector;
   homePlayerCardLinksSelector = selectors.homePlayerCardLinksSelector;
   homeTeamCardLinksSelector = selectors.homeTeamCardLinksSelector;
