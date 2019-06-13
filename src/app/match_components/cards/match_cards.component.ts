@@ -24,11 +24,13 @@ export class MatchCardsComponent implements OnInit {
     {id: 'card1-left', panel: 'left', top: 20, left: 50, player: 'N\'Golo Kante', playerPhotoPath: 'assets/img/kante.JPG',
       victim: 'Samuel Umtiti', victimPhotoPath: 'assets/img/samuel.JPG', minute: '20\'', positionImg: '../../../assets/img/ground-red.png'},
     {id: 'card2-left', panel: 'left', top: 60, left: 50, player: 'Keisuke Honda', playerPhotoPath: 'assets/img/honda.JPG',
+      // tslint:disable-next-line:max-line-length
       victim: 'Shinji Kagawa', victimPhotoPath: 'assets/img/kagawa.JPG', minute: '70\'', positionImg: '../../../assets/img/ground-yellow2.png'}
   ];
 
   team2: Card[] = [
     {id: 'card1-right', panel: 'right', top: 40, left: 50, player: 'Samuel Umtiti', playerPhotoPath: 'assets/img/samuel.JPG',
+      // tslint:disable-next-line:max-line-length
       victim: 'N\'Golo Kante', victimPhotoPath: 'assets/img/kante.JPG', minute: '40\'', positionImg: '../../../assets/img/ground-yellow.png'}
   ];
 
@@ -44,6 +46,7 @@ export class MatchCardsComponent implements OnInit {
       newCard.style.top = e.top + '%';
       newCard.style.left = e.left + '%';
     });
+    document.getElementById(team[0].id).classList.add('chosen-card');
   }
 
   changeDescription($event) {

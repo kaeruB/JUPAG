@@ -1,11 +1,13 @@
 // TO USE THE VARIABLES IN OTHER SCSS FILES, PUT THIS IMPORT IN COMPONENT'S SCSS FILE: @import '../../styles/_variables.scss';
 
-$font-size-header: 3rem;
-$font-size-section-header: 2.2rem;
-$font-size-header-secondary: 2rem;
-$font-size-header-tertiary: 1.7rem;
-$font-size-text: 1.5rem;
-$font-size-small-text: 1.3rem;
+$font-size-header: 4.4rem;
+$font-size-section-header: 3.1rem;
+$font-size-header-secondary: 2.8rem;
+$font-size-header-tertiary: 2.3rem;
+$font-size-text: 2rem;
+$font-size-small-text: 1.8rem;
+$font-size-very-small-text: 1.5rem;
+$font-size-tiny-text: 1.1rem;
 
 $color-background: #38383E;
 $color-dark-text: #6d6d75e8;
@@ -15,6 +17,7 @@ $color-light: #B2E2EC;
 $color-bright: #daf9ff;
 $color-tertiary: #67C7D4;
 $color-secondary: #6495ED;
+$color-home-card: #46656a;
 
 $color-strong-ball: #FF5722;
 $color-weak-ball: #FFC107;

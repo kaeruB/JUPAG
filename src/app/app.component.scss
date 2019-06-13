@@ -9,6 +9,7 @@
 
 .header {
   width: 80vw;
+  height: 15rem;
   font-size: $font-size-header;
 
   background-image: linear-gradient(to left, #f6865529, #61c3592e);
@@ -22,7 +23,7 @@
   border: 1px solid grey;
   border-width: 1px 0 1px;
 
-  @include respond(phone) {
+  @include respond(tablet) {
     width: 100vw;
     flex-direction: column;
     padding: 0;
@@ -33,7 +34,7 @@
     width: 60%;
     text-align: left;
 
-    @include respond(phone) {
+    @include respond(tablet) {
       width: 100%;
       text-align: center;
     }
@@ -45,7 +46,7 @@
     align-items: center;
     width: 40%;
 
-    @include respond(phone) {
+    @include respond(tablet) {
       width: 100%;
       text-align: center;
     }
@@ -55,10 +56,15 @@
 
     input {
       color: $color-tertiary;
+      // font-size: $font-size-section-header;
     }
 
     &--icon {
-      font-size: 4rem;
+      font-size:$font-size-header;
+    }
+
+    mat-form-field {
+      font-size: 2rem;
     }
   }
 
@@ -73,4 +79,11 @@
 
 .hidden {
   display: none;
+}
+
+.tablet-no-padding {
+  @include respond(tablet) {
+    padding: 0 0 0 0;
+    width: 100%;
+  }
 }

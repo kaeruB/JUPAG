@@ -1,15 +1,152 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/abstract/_mixins.scss';
+
 :host {
   width: 80vw;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 4rem;
+
+  @include respond(tablet) {
+    display: initial;
+  }
 }
 
 .home-card__match, .home-card__player, .home-card__team {
   flex-basis: 0;
   flex-grow: 1;
+
+  @include respond(tablet) {
+    width: 100%;
+  }
 }
 
 .home-card__match, .home-card__player {
   margin-right: 5rem;
+
+  @include respond(tablet) {
+    padding-bottom: 2rem;
+  }
+}
+
+
+.home-card {
+  height: 60rem;
+  background: $color-home-card;
+  color: white;
+  border-radius: 5px;
+
+  @include respond(tablet) {
+    height: initial;
+    padding-bottom: 2rem;
+  }
+
+  &__info {
+    //@include respond(tablet) {
+    //  padding-right: 2rem;
+    //}
+  }
+
+  &__info--bold {
+    font-weight: bold;
+  }
+
+  &__link {
+    display: flex;
+    color: inherit;
+
+    @include respond(tablet) {
+      justify-content: center;
+    }
+
+    &--column {
+      flex-direction: column;
+      text-align: left;
+      padding-left: 3rem;
+
+      @include respond(tablet) {
+       flex-direction: row;
+      }
+    }
+
+    &--left {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      padding-left: 3rem;
+      width: 70%;
+    }
+
+    &--row-oriented {
+      flex-direction: row;
+    }
+
+    &--right {
+      width: 30%;
+
+      @include respond(tablet) {
+        width: 10%;
+      }
+    }
+  }
+
+  &__title {
+    font-size: $font-size-header-secondary;
+    padding: 5rem 0 5rem 0;
+    color: inherit;
+  }
+
+  &__links {
+    font-size: $font-size-small-text;
+  }
+
+  &__img--shape {
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__img {
+    height: 100%;
+    transform: scale(1.1);
+    filter: brightness(95%);
+
+    &--small {
+      transform: scale(0.8);
+    }
+  }
+
+
+
+  &__date {
+
+  }
+}
+
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+
+  &--wide {
+    width: 100%;
+  }
+
+  @include respond(tablet) {
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+  }
+}
+
+.card-photo {
+  width: 30%;
+
+  @include respond(tablet) {
+    width: 10%;
+  }
 }

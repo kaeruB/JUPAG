@@ -1,0 +1,18 @@
+.custom-link {
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  &:active{
+    text-decoration: none;
+    transform: translateY(.5rem);
+
+    &::after {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+}
