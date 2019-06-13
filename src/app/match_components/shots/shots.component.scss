@@ -1,4 +1,5 @@
 @import '../../../styles/_variables.scss';
+@import '../../../styles/abstract/_mixins.scss';
 
 .shots {
   padding-top: 8rem;
@@ -24,6 +25,10 @@
 
     span {
       font-size: $font-size-header-tertiary;
+
+      @include respond(tablet) {
+        font-size: $font-size-very-small-text;
+      }
     }
 
     &--left {
@@ -33,6 +38,11 @@
     &--middle {
       width: 15%;
       position: relative;
+
+      @include respond(tablet) {
+        width: 30%;
+      }
+
       .empty-ground__img {
         width: 100%;
       }
@@ -57,16 +67,26 @@
 
     .ball-button {
       position: absolute;
+      padding: 0 0 0 0;
+      min-width: 1px !important;
+      width: 2.5rem;
+      height: 2.5rem;
     }
 
     .shots__timeline {
       position: relative;
       width: 20%;
       display: flex;
-      padding-left: 2rem;
+      padding-left: 5rem;
 
       button {
         font-size: $font-size-small-text;
+
+        @include respond(tablet) {
+          font-size: $font-size-tiny-text;
+          margin-left: -5rem;
+          @include stroke(1, #000000)
+        }
       }
     }
 
@@ -76,11 +96,16 @@
 
       &--img {
         width: 100%;
+        height: 100%;
       }
 
       .ball {
         font-size: 2.5rem;
         color: $color-weak-ball;
+
+        @include respond(tablet) {
+          font-size: 2rem;
+        }
       }
 
       #ball9 i, #ball3 i {
@@ -91,6 +116,10 @@
         color: $color-chosen-ball !important;
         font-size: 5rem;
         transform: translate(-1rem, -1rem);
+
+        @include respond(tablet) {
+          font-size: 3.5rem;
+        }
       }
     }
   }

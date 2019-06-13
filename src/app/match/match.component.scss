@@ -1,4 +1,5 @@
 @import '../../styles/_variables.scss';
+@import '../../styles/abstract/_mixins.scss';
 
 .match {
   font-size: $font-size-text;
@@ -7,6 +8,10 @@
   padding: 10rem 10rem 20rem 10rem;
   border-top: 0;
 
+  @include respond(tablet) {
+    padding: 5rem 2rem 5rem 2rem;
+  }
+
   &__header {
     display: flex;
     justify-content: space-around;
@@ -14,6 +19,10 @@
     padding-top: 12rem;
     padding-bottom: 17rem;
     font-weight: bold;
+
+    @include respond(tablet) {
+      font-size: $font-size-header-tertiary;
+    }
   }
 
   &__basic-info {
