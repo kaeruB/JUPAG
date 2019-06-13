@@ -1,11 +1,11 @@
 @import '../../styles/_variables.scss';
+@import '../../styles/abstract/_mixins.scss';
 
 :host {
   width: 100%;
 }
 
 .filter {
-
 
   &__title {
     font-size: $font-size-header-secondary;
