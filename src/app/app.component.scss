@@ -23,7 +23,7 @@
   border: 1px solid grey;
   border-width: 1px 0 1px;
 
-  @include respond(phone) {
+  @include respond(tablet) {
     width: 100vw;
     flex-direction: column;
     padding: 0;
@@ -34,7 +34,7 @@
     width: 60%;
     text-align: left;
 
-    @include respond(phone) {
+    @include respond(tablet) {
       width: 100%;
       text-align: center;
     }
@@ -46,7 +46,7 @@
     align-items: center;
     width: 40%;
 
-    @include respond(phone) {
+    @include respond(tablet) {
       width: 100%;
       text-align: center;
     }
@@ -79,4 +79,11 @@
 
 .hidden {
   display: none;
+}
+
+.tablet-no-padding {
+  @include respond(tablet) {
+    padding: 0 0 0 0;
+    width: 100%;
+  }
 }
