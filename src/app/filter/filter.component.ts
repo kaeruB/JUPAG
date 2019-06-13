@@ -29,6 +29,16 @@ export class FilterComponent implements OnInit {
     });
   }
   theFormGroup: FormGroup;
+  positions: string[] = [
+    'Goalkeeper',
+    'Defenders',
+    'Outside fullback',
+    'Central Defenders',
+    'Midfielders',
+    'Forwards',
+    'Center Forward',
+  ];
+
   dateFrom;
   dateTo;
   place = 'Chosen place';

@@ -66,13 +66,10 @@
     </mat-grid-tile>
 
     <mat-grid-tile [colspan]="1" [rowspan]="1" class="no-top-border no-right-border">
-      <mat-form-field style="width: 40%; height: 30%; margin-left: 10%;">
-        <label>
-          <input matInput type="text" placeholder="Position" [(ngModel)]="position" style="width: 70%; height: 50%;">
-          <button mat-button *ngIf="position" matSuffix mat-icon-button aria-label="Clear" (click)="position=''">
-            <mat-icon>close</mat-icon>
-          </button>
-        </label>
+      <mat-form-field style="width: 30%; height: 30%; margin-left: 10%;">
+        <mat-select [(ngModel)]="position" placeholder="Position" style="width: 100%; height: 50%;">
+          <mat-option *ngFor="let position of positions" [value]="position">{{ position }}</mat-option>
+        </mat-select>
       </mat-form-field>
 
       <div style="padding-right: 1rem; padding-left: 1rem;"></div>
