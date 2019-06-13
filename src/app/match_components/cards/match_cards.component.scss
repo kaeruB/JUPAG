@@ -1,4 +1,5 @@
 @import '../../../styles/_variables.scss';
+@import '../../../styles/abstract/_mixins.scss';
 
 .cards {
 
@@ -16,6 +17,12 @@
 
   &__panel--left {
     border-right: 1px solid;
+  }
+
+  &__panel--right {
+    @include respond(tablet) {
+      justify-content: flex-end;
+    }
   }
 
   &__panel--left, &__panel--right {
@@ -36,6 +43,10 @@
 
     &--card {
       width: 70%;
+
+      @include respond(tablet) {
+        width: 100%;
+      }
     }
   }
 
@@ -45,6 +56,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include respond(tablet) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 70%;
+    }
 
     &--details {
       display: flex;
@@ -57,6 +74,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include respond(tablet) {
+          font-size: $font-size-tiny-text;
+        }
       }
 
       .details__middle {
@@ -64,6 +85,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include respond(tablet) {
+          font-size: $font-size-tiny-text;
+        }
       }
 
       .details__img {
@@ -99,6 +124,11 @@
       height: 3rem;
       width: 4rem;
 
+      @include respond(tablet) {
+        margin-left: -3rem;
+        width: 0.1rem;
+      }
+
       animation: pulse 2s infinite;
 
       &:hover,
@@ -129,6 +159,10 @@
 .chosen-card {
   transform: scale(1.4);
   animation: none;
+
+  @include respond(tablet) {
+    transform: scale(1.2);
+  }
 }
 
 .card--yellow {
