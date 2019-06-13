@@ -3,12 +3,12 @@
 <div class="filter__warnings" *ngIf="!theFormGroup.valid">
   <p *ngIf="theFormGroup.hasError('dateNotOrdered')">Start date can't be earlier than the end date</p>
   <p *ngIf="theFormGroup.hasError('activeDateNotOrdered')">Active start date can't be earlier than the end date</p>
-  <p *ngIf="theFormGroup.hasError('ageNotOrdered')">Minimal age can't be bigger than max age!</p>
-  <p *ngIf="theFormGroup.hasError('wonMatchesNotOrdered')">Minimal won matches number can't be higher than max number!</p>
-  <p *ngIf="theFormGroup.hasError('lostMatchesNotOrdered')">Minimal lost matches number can't be higher than max number!</p>
-  <p *ngIf="theFormGroup.hasError('goalsNumberNotOrdered')">Minimal goals number can't be higher than max number!</p>
-  <p *ngIf="theFormGroup.hasError('yellowFlagsNotOrdered')">Minimal yellow flags number can't be higher than max number!</p>
-  <p *ngIf="theFormGroup.hasError('redFlagsNotOrdered')">Minimal red flags number can't be higher than max number!</p>
+  <p *ngIf="theFormGroup.hasError('ageNotOrdered')">Minimal age can't be greater than the maximal one!</p>
+  <p *ngIf="theFormGroup.hasError('wonMatchesNotOrdered')">Minimal won matches number can't be higher than the maximal one!</p>
+  <p *ngIf="theFormGroup.hasError('lostMatchesNotOrdered')">Minimal lost matches number can't be higher than the maximal one!</p>
+  <p *ngIf="theFormGroup.hasError('goalsNumberNotOrdered')">Minimal goals number can't be higher than the maximal one!</p>
+  <p *ngIf="theFormGroup.hasError('yellowFlagsNotOrdered')">Minimal yellow flags number can't be higher than the maximal one!</p>
+  <p *ngIf="theFormGroup.hasError('redFlagsNotOrdered')">Minimal red flags number can't be higher than the maximal one!</p>
 </div>
 <form [formGroup]="theFormGroup">
   <mat-grid-list cols="3" rowHeight="100px">
