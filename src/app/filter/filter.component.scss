@@ -17,7 +17,14 @@
   &__subtitle {
     font-size: $font-size-header-tertiary;
   }
+
+  &__warnings {
+    font-size: $font-size-header-tertiary;
+    color: red;
+  }
 }
+
+
 
 mat-grid-tile {
   border: 1px solid $color-grey-light;

@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FilterComponent } from './filter/filter.component';
 import { HomeComponent } from './home/home.component';
 import { HomeCardComponent } from './home-card/home-card.component';
@@ -58,7 +58,8 @@ import { ShotsComponent } from './match_components/shots/shots.component';
     MatTableModule,
     MatGridListModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
